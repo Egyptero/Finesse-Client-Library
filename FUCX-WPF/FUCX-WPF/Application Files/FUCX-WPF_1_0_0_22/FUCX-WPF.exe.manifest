@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="FUCX-WPF.exe" version="1.0.0.22" publicKeyToken="f50e320a9e815530" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="icon_g0S_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="FUCX-WPF" version="2.0.1.1" language="neutral" processorArchitecture="msil" />
+    <commandLine file="FUCX-WPF.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FinesseClient.dll" size="87552">
+      <assemblyIdentity name="FinesseClient" version="2.2.8.8" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>45f95htiZ5JHIdE/pogPtAZM/+5u/sJJhARmljQ3e1E=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FUCX-WPF.exe" size="914896">
+      <assemblyIdentity name="FUCX-WPF" version="2.0.1.1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LXHXJSRBQIFL1XiIFqhpCfISsOO2uSQHc8zgcJOI8FE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaterialDesignColors.dll" size="224256">
+      <assemblyIdentity name="MaterialDesignColors" version="1.1.2.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>d4wZkVSpfjUBqYKDtRfNT80gSBwKfOiY66XUQlfkFX0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaterialDesignThemes.Wpf.dll" size="4857856">
+      <assemblyIdentity name="MaterialDesignThemes.Wpf" version="2.4.1.1101" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>pZgulo2jipyA/4WFZDMr9ELIT1bj9lGoNOrTaDDhHhU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Matrix.dll" size="944640">
+      <assemblyIdentity name="Matrix" version="1.6.0.0" publicKeyToken="0120F1DF71FF86BC" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5W2w4roEow0T8Q7yldfOIta5CGlL1l61Vn8dlHKsnD8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RestSharp.dll" size="161792">
+      <assemblyIdentity name="RestSharp" version="105.2.3.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>wp5UK4nnK4J4nZU0zeHqOsIQTOGJoDF3aoreZRfq7Jg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="XamlAnimatedGif.dll" size="89088">
+      <assemblyIdentity name="XamlAnimatedGif" version="1.1.10.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>N6gBHPpemlGMk6MF0YYtdxGGaccBU0WVHyPqSfaN7m8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="FUCX-WPF.exe.config" size="184">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YyXx11OQ8Y9qQaMsAPfgWQIUIJMPT4Sw3i2UQTU2sRM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="icon_g0S_icon.ico" size="259598">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>45yP/biX9lPvPsW8q0xx1pMttEJA/vYJXMEH0Oh0sEA=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=MAMDOUH-PC\Mamdouh" issuerKeyHash="a574e98e1d99b20f2d52244c9c04a24fec8ad92f" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>3vcgvpc0WBCIPP1DYTnU7Se0k92ko/5VU//8792uGwA=</DigestValue></Reference></SignedInfo><SignatureValue>YpeJpnhaqQOV6ZNcaaWStst5PjPkUQWiatwu2Jg6Cez0m/gXDyAknIzSP9mXRT2aKcNQ9rBtHasm/BDbHxvIoAtLHhez9NESrZHM0Hl+sm+l5VEO5ih0xvV7WKlwFEzHUPx6Vt6IGCJlnLBYFVV1qTq8QuEwF/u3gjOz/o6neJg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>vVerbugiMEkugbHv4FTW7AzY6aITmIh4zpwgRI0ApYJQh/F+lmm0VfuQTw43LJMEp5f3dDTlh8WGCX0nI373ZOmSUJXr5o2vE/XBNUsnr7v8nAdCeyVb9AJff0yB+UZScjhqjJw5AQWE2NS0OHLty/nxWCyWXJ6NQwdZX/Af0iE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="001baeddeffcff5355fea3a4dd93b427edd4396143fd3c8810583497be20f7de" Description="" Url=""><as:assemblyIdentity name="FUCX-WPF.exe" version="1.0.0.22" publicKeyToken="f50e320a9e815530" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MAMDOUH-PC\Mamdouh</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>LtHEy2pxXmfx0RIIaEbiXCGlh7nb1DHD3o4tW1FJMrQ=</DigestValue></Reference></SignedInfo><SignatureValue>f48XlplEReQ1uzmWG6JoSjjKeggwuotCIDuqgMVkAzMWSr/y3oh/cpYuusimCF6JGX8DWK6Zpn0iVPhm9zcybpJ3cstIURlZYO8803wiqQe7ZSCNQHU2VU2uwIr/+H8yNQ/n5iEpe1j2/IKm2tJvpfRHMkqA0DD3YwkbmsaPchg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>vVerbugiMEkugbHv4FTW7AzY6aITmIh4zpwgRI0ApYJQh/F+lmm0VfuQTw43LJMEp5f3dDTlh8WGCX0nI373ZOmSUJXr5o2vE/XBNUsnr7v8nAdCeyVb9AJff0yB+UZScjhqjJw5AQWE2NS0OHLty/nxWCyWXJ6NQwdZX/Af0iE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQYX3J5GYW261F+Pns+X1MvTANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQATQBBAE0ARABPAFUASAAtAFAAQwBcAE0AYQBtAGQAbwB1AGgwHhcNMTgwODE0MTk1ODIzWhcNMTkwODE1MDE1ODIzWjAvMS0wKwYDVQQDHiQATQBBAE0ARABPAFUASAAtAFAAQwBcAE0AYQBtAGQAbwB1AGgwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAL1Xq27oIjBJLoGx7+BU1uwM2OmiE5iIeM6cIESNAKWCUIfxfpZptFX7kE8ONyyTBKeX93Q05YfFhgl9JyN+92TpklCV6+aNrxP1wTVLJ6+7/JwHQnslW/QCX39MgflGUnI4aoycOQEFhNjUtDhy7cv58VgsllyejUMHWV/wH9IhAgMBAAEwDQYJKoZIhvcNAQELBQADgYEArwZxaO8DQmb8eBX0S+hAhlLYc/b4QUzxKdinRwBP9a5zn/qVah/LD0YJoKBwjPxh5cRs+WnWtyebfuzWjxM7Lnr3WgxpBKn8fYEx0KQN08ITiIPeAA32M2SZL/6AInF5m2U/TCkSSj1C4cEbPa0VKm/hND03FQ1genEjHr0uWd8=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

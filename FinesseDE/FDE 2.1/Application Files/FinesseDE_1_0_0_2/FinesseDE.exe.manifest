@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="FinesseDE.exe" version="1.0.0.2" publicKeyToken="ee6aaa153624b2b3" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Finesse.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="FinesseDE" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="FinesseDE.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FinesseClient.dll" size="54784">
+      <assemblyIdentity name="FinesseClient" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>OzZ8PyAKjravatw2VIjKaehgcrebFGGJK1xKYfPXCOs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FinesseDE.exe" size="722896">
+      <assemblyIdentity name="FinesseDE" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>z4LRshAMsDzdOLRx1dy+hOntALvwfFe9zf5Jgl45tU8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Matrix.dll" size="1146880">
+      <assemblyIdentity name="Matrix" version="1.6.0.6" publicKeyToken="0120F1DF71FF86BC" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>aAGhgdiegtaUpAuYx9ycX7O9s8EWkfboSFQSk9nXCI0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RestSharp.dll" size="171520">
+      <assemblyIdentity name="RestSharp" version="106.2.1.0" publicKeyToken="598062E77F915F75" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tTn2SNqzfyEayzjfz0x5tIj6O+taft9nQPiU0tGAdEk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.ValueTuple.dll" size="79208">
+      <assemblyIdentity name="System.ValueTuple" version="4.0.2.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4c2JuU6Ii9/Gz4zIYIc1xA1LwNNYDT+SEAIwS2lsYcM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="XamlAnimatedGif.dll" size="89088">
+      <assemblyIdentity name="XamlAnimatedGif" version="1.1.10.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>N6gBHPpemlGMk6MF0YYtdxGGaccBU0WVHyPqSfaN7m8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Finesse.ico" size="259598">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>45yP/biX9lPvPsW8q0xx1pMttEJA/vYJXMEH0Oh0sEA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="FinesseDE.exe.config" size="1021">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+SK7H/VuIvyvs0A3ynm72Nso2yW9PL3hid8iIGll9Oc=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=MAMDOUH-PC\Mamdouh" issuerKeyHash="8ea3992a703a616209e3a74afe9bf3d768036390" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>GPbsrkBohsSu1MSD/uoNbTBU0HbXBwWKwGEGZohEyBM=</DigestValue></Reference></SignedInfo><SignatureValue>oaOXZmBJp0q3xj7Niyz+73O6bNEwjmr5YQj5w3LrT0Mqg+RxGW+cZ77ZYN2zBh34bT5owbuN965gZLFh8bbbvbfrnwrw+4Lc+y5ZhOxZ6xfGwWJDLM6vkNimSxSf4Cq+GGhMCo9GZl4w8pyC6hmxqB23SMFwcISldsur1iryvtA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>rkxgL1PkQcKWeb1E1yx2G6I2rwxkbR3pKCTHUhc5O4qd5Cgo5dfJ7Wvj610sLCWNjXJU39pzFXTWzZG2bTFx8aOER8ODZW/Azal6Yu9to+ZG3XI6NUyU0hmdnoyfhQB9jmdsygaqjd8CxmoJHD1edAilZbaXXz/1lbTlRTxcVPE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="13c84488660661c08a0507d776d054306d0deafe83c4d4aec4866840aeecf618" Description="" Url=""><as:assemblyIdentity name="FinesseDE.exe" version="1.0.0.2" publicKeyToken="ee6aaa153624b2b3" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MAMDOUH-PC\Mamdouh</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>jdvxEWEqrcpGuVMZED/ojKYK6Ci3pv0GMyoyP2ZO0Mk=</DigestValue></Reference></SignedInfo><SignatureValue>XvxJ+kjaUvhGR0VAjx24iRryWVPQxcp/w274HCo+r0X8RQxyzlLpUL4SltBBC/x0H5jZvPfbFWbls7lkEkT1qJRvx+azUjJhzsgg8K5bhxBoOgBVr2KDp6tmFl0HfSpi4vh6VfklERIYDNzRz3I7DyrVSEhVylwMyPPmpWwTM7U=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>rkxgL1PkQcKWeb1E1yx2G6I2rwxkbR3pKCTHUhc5O4qd5Cgo5dfJ7Wvj610sLCWNjXJU39pzFXTWzZG2bTFx8aOER8ODZW/Azal6Yu9to+ZG3XI6NUyU0hmdnoyfhQB9jmdsygaqjd8CxmoJHD1edAilZbaXXz/1lbTlRTxcVPE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQe9ZDNXN/5q5CUhryF/bcOTANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQATQBBAE0ARABPAFUASAAtAFAAQwBcAE0AYQBtAGQAbwB1AGgwHhcNMTgwMjI1MDAxNDU5WhcNMTkwMjI1MDYxNDU5WjAvMS0wKwYDVQQDHiQATQBBAE0ARABPAFUASAAtAFAAQwBcAE0AYQBtAGQAbwB1AGgwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAK5MYC9T5EHClnm9RNcsdhuiNq8MZG0d6Sgkx1IXOTuKneQoKOXXye1r4+tdLCwljY1yVN/acxV01s2Rtm0xcfGjhEfDg2VvwM2pemLvbaPmRt1yOjVMlNIZnZ6Mn4UAfY5nbMoGqo3fAsZqCRw9XnQIpWW2l18/9ZW05UU8XFTxAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAJtBGzw5EN6zN41f/i7ppQzBa/Jy0WkJ/m/qvXSRxbX1K2LsiUVlqmLp0MN8j/LaZsV34Zo/svwwgJkVPh6vptI4ylxD7h2ERduKYuUu13rNLCrs9RKMJl5ubAF0DdtDaWSdMA8IUU526rlTVGVIQWSfCj4M+edmmoaiwpVJWQOo=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

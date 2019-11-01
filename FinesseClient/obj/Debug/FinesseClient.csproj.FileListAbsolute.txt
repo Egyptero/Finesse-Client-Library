@@ -1,0 +1,13 @@
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\bin\Debug\FinesseClient.dll.config
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\bin\Debug\FinesseClient.dll
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\bin\Debug\FinesseClient.pdb
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\bin\Debug\Matrix.dll
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\bin\Debug\RestSharp.dll
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\bin\Debug\System.ValueTuple.dll
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\bin\Debug\Matrix.xml
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\bin\Debug\System.ValueTuple.xml
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\obj\Debug\FinesseClient.csproj.CoreCompileInputs.cache
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\obj\Debug\FinesseClient.csproj.CopyComplete
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\obj\Debug\FinesseClient.dll
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\obj\Debug\FinesseClient.pdb
+C:\Users\Mamdouh\source\repos\CXConnect\FinesseClient\obj\Debug\FinesseClient.csprojAssemblyReference.cache

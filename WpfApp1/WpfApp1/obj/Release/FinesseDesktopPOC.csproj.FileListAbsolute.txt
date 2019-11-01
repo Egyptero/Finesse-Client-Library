@@ -1,0 +1,5 @@
+C:\Users\Mamdouh\source\repos\CXConnect\WpfApp1\WpfApp1\obj\Release\FinesseDesktopPOC.csprojResolveAssemblyReference.cache
+C:\Users\Mamdouh\source\repos\CXConnect\WpfApp1\WpfApp1\obj\Release\MainWindow.g.cs
+C:\Users\Mamdouh\source\repos\CXConnect\WpfApp1\WpfApp1\obj\Release\App.g.cs
+C:\Users\Mamdouh\source\repos\CXConnect\WpfApp1\WpfApp1\obj\Release\WpfApp1_MarkupCompile.cache
+C:\Users\Mamdouh\source\repos\CXConnect\WpfApp1\WpfApp1\obj\Release\WpfApp1_MarkupCompile.lref

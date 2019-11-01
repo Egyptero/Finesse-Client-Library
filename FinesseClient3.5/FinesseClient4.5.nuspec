@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Fire M.I.S.C</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://www.firemisc.com/cisco-agent-library</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Finesse Client Library. Check documentation at the link https://github.com/mamdouharef76/FinesseClient/blob/master/Readme.md</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>FIREMISC Cisco cisco CISCO unified communications Unified Communications UCCE UCCX Finesse FinesseClient FinesseDLL</tags>
+  </metadata>
+</package>

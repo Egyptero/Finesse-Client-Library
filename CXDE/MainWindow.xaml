@@ -1,0 +1,456 @@
+﻿<Window x:Class="CXDE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+        xmlns:prop="clr-namespace:CXDE.Properties"
+        xmlns:local="clr-namespace:CXDE"
+        mc:Ignorable="d"
+        Title="Finesse USD"
+        Closing="Window_Closing"
+        MaxWidth="400"
+        MinHeight="800">
+    <Grid x:Name="MainGrid" Margin="10,10,10,10" Background="White">
+
+        <StackPanel x:Name="MainScreen" Visibility="Visible">
+            <Grid HorizontalAlignment="Stretch" Visibility="Visible">
+                <TextBlock FontFamily="Arial" Foreground="Gray" HorizontalAlignment="Center" Text="Connector Version 1.80"/>
+            </Grid>
+            <Grid HorizontalAlignment="Stretch" x:Name="MessageBar" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" x:Name="UserMessageImage" Source="Images/Error.png" Width="20" Height="20"/>
+                <TextBlock Grid.Column="1" x:Name="UserMessageText" HorizontalAlignment="Stretch" Background="Red" Foreground="White" Text="Error connecting to server" Margin="5,0"/>
+                <Button Grid.Column="2" ToolTip="Close the error bar" Click="ErrorBarCloseClick">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image  x:Name="UserCloseImage" Source="Images/close.png" Width="20" Height="20" HorizontalAlignment="Right"/>
+                </Button>
+            </Grid>
+
+            <Grid x:Name="StatusGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" x:Name="InStatusTimer" HorizontalAlignment="Left" VerticalAlignment="Center" Text="In state since: 00:00" FontFamily="Arial" Foreground="Gray"/>
+                <ComboBox Grid.Column="1" x:Name="StatusDropDown" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="StatusDropDown_SelectionChanged"/>
+            </Grid>
+            <Line Stretch="Fill" Stroke="DarkGray" X2="2" Margin="0,10" StrokeThickness="1">
+                <Line.Effect>
+                    <DropShadowEffect ShadowDepth="1" Direction="330" Color="Black" Opacity="0.5" BlurRadius="1"/>
+                </Line.Effect>
+            </Line>
+            <Grid x:Name="AgentInfoGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="My Information" FontFamily="Arial" Foreground="Gray" FontWeight="Black"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" x:Name="AgentNameInfo" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Name: Mamdouh Aref" FontFamily="Arial" Foreground="Gray"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" x:Name="AgentExtensionInfo" VerticalAlignment="Center" Text="Extension: 1072" FontFamily="Arial" Foreground="Gray"/>
+
+                <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Text="My Statistics" FontFamily="Arial" Foreground="Gray" FontWeight="Black"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" x:Name="LoginDuration" Text="Login Duration: 00:00:00" VerticalAlignment="Center"  Foreground="Gray"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" x:Name="AverageTalkTime" Text="Avg Talk Time: 00:00:00" HorizontalAlignment="Left" VerticalAlignment="Center"  Foreground="Gray"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" x:Name="NotReadyTime" Text="Not Ready Time: 00:00:00" HorizontalAlignment="Left" VerticalAlignment="Center"  Foreground="Gray"/>
+                <TextBlock Grid.Row="5" Grid.Column="1" x:Name="HandledCall" Text="Handled Calls: 00" HorizontalAlignment="Left" VerticalAlignment="Center"  Foreground="Gray"/>
+
+            </Grid>
+            <Line Stretch="Fill" Stroke="DarkGray" X2="2" Margin="0,10" StrokeThickness="1">
+                <Line.Effect>
+                    <DropShadowEffect ShadowDepth="1" Direction="330" Color="Black" Opacity="0.5" BlurRadius="1"/>
+                </Line.Effect>
+            </Line>
+
+            <Grid x:Name="MakeCall" HorizontalAlignment="Center">
+                <StackPanel>
+                    <WrapPanel HorizontalAlignment="Center">
+                        <TextBox x:Name="DialNumber" Text="Type Number" HorizontalAlignment="Center" MinWidth="200" HorizontalContentAlignment="Center" BorderBrush="Gray" Foreground="Gray" GotFocus="DialNumber_GotFocus" LostFocus="DialNumber_LostFocus"/>
+                    </WrapPanel>
+                    <Line Margin="0,3"/>
+                    <Button x:Name="MakeCallButton" Content="Dial" HorizontalAlignment="Center" Background="DarkGray" Foreground="White" FontWeight="Black" FontSize="14px" Width="50" Click="MakeCallClick"/>
+                </StackPanel>
+            </Grid>
+            <ScrollViewer MaxHeight="400" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch">
+                <StackPanel x:Name="Calls" Margin="0,10">
+                    <Border x:Name="CallDialog1" BorderBrush="Gray" BorderThickness="1" Padding="5,5" Margin="5,5">
+
+                        <!--HorizontalAlignment="{Binding HorizontalAlignment, Mode=OneWayToSource, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContentPresenter}}}"-->
+                        <StackPanel>
+                            <Grid HorizontalAlignment="Stretch" x:Name="CallVarBar" Visibility="Visible">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" x:Name="SkillHighLight" HorizontalAlignment="Stretch" TextAlignment="Center" Background="Green" Foreground="White" Text="CurrentAcct_VIP_Inq" Margin="0,0" FontSize="14"/>
+                                <TextBlock Grid.Column="1" x:Name="LangHighLight" HorizontalAlignment="Stretch" TextAlignment="Center" Background="Green" Foreground="White" Text="Ar" Margin="0,0" FontSize="14"/>
+                                <TextBlock Grid.Column="2" x:Name="CTIHighLight" HorizontalAlignment="Stretch" TextAlignment="Center" Background="Green" Foreground="White" Text="CTI" Margin="0,0" FontSize="14"/>
+                            </Grid>
+                            <StackPanel HorizontalAlignment="{Binding HorizontalAlignment, Mode=OneWayToSource, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContentPresenter}}}">
+                                <Grid x:Name="CallStatusBar" Margin="10,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" HorizontalAlignment="Left" Text="Call Status: Active" Foreground="Gray"/>
+                                    <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="Call Duration: 00:00" Foreground="Gray"/>
+                                </Grid>
+                                <Grid x:Name="CallDetails">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1.5*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18px" Foreground="Gray" Text="+966 5651 51517" FontFamily="Arial"/>
+                                    <Grid Grid.Row="1" Grid.Column="1" x:Name="CallActions" VerticalAlignment="Bottom">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Column="0" x:Name="KeypadCallButton" ToolTip="Send DTMF" HorizontalAlignment="Center" VerticalAlignment="Center" Width="35" Height="35">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Grid>
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                            <StackPanel Orientation="Horizontal" >
+                                                <Image HorizontalAlignment="Stretch" Source="Images/keypadcall.png"/>
+                                            </StackPanel>
+                                        </Button>
+                                        <Button Grid.Column="1" x:Name="HoldCallButton" ToolTip="Hold Call" HorizontalAlignment="Center" VerticalAlignment="Center" Width="35" Height="35" Click="HoldCallClick">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Grid>
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                            <StackPanel Orientation="Horizontal" >
+                                                <Image HorizontalAlignment="Stretch" Source="Images/holdcall.png"/>
+                                            </StackPanel>
+                                        </Button>
+                                        <Button Grid.Column="1" x:Name="ResumeCallButton" ToolTip="Resume Call" HorizontalAlignment="Center" VerticalAlignment="Center" Width="35" Height="35" Click="ResumeCallClick">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Grid>
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                            <StackPanel Orientation="Horizontal" >
+                                                <Image Source="Images/resumecall.png"/>
+                                            </StackPanel>
+                                        </Button>
+                                        <Button Grid.Column="2" x:Name="ConsultCallButton" ToolTip="Conference Call" HorizontalAlignment="Center" VerticalAlignment="Center" Width="35" Height="35">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Grid>
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                            <StackPanel Orientation="Horizontal" >
+                                                <Image Source="Images/conferencecall.png"/>
+                                            </StackPanel>
+                                        </Button>
+                                        <Button Grid.Column="3" x:Name="TransferCallButton" ToolTip="Tranfer Call"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="35">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Grid>
+                                                        <ContentPresenter HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                            <StackPanel Orientation="Horizontal" >
+                                                <Image Source="Images/transfercall.png"/>
+                                            </StackPanel>
+                                        </Button>
+                                        <Button  Grid.Column="4" x:Name="EndCallButton" ToolTip="End Call" HorizontalAlignment="Center" VerticalAlignment="Center" Width="35" Height="35" Click="EndCallClick">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Grid>
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                            <StackPanel Orientation="Horizontal" >
+                                                <Image Source="Images/releasecall.png"/>
+                                            </StackPanel>
+                                        </Button>
+                                        <Button Grid.Column="4" x:Name="AnswerCallButton" ToolTip="Answer Call" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="35" Height="35" Click="AnswerCallClick">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Grid>
+                                                        <ContentPresenter HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                            <StackPanel Orientation="Horizontal" >
+                                                <Image Source="Images/answercall.png"/>
+                                            </StackPanel>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel Background="White" Margin="10,10">
+                                <Line Stroke="Gray" Stretch="Fill" X2="1"/>
+                                <Grid x:Name="SendCallToIVR" Margin="0,5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="0.4*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Send to IVR" Foreground="Gray" VerticalAlignment="Center"/>
+                                    <ComboBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray">
+                                        <ComboBoxItem Content="Please Make Selection" IsSelected="True"/>
+                                        <ComboBoxItem Content="Main Menu"/>
+                                        <ComboBoxItem Content="Billing Menu"/>
+                                    </ComboBox>
+                                    <Button Grid.Row="0" Grid.Column="2" x:Name="IVRCallButton" ToolTip="Send Call To IVR" HorizontalAlignment="Center" VerticalAlignment="Center" Width="35" Height="35">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Grid>
+                                                    <ContentPresenter HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                        <StackPanel Orientation="Horizontal" >
+                                            <Image Source="Images/ivrcall.png"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <CheckBox Grid.Row="1" Grid.Column="0" Content="Male Only" Foreground="Gray" IsChecked="True"/>
+                                    <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+                                        <RadioButton Content="Inquiry" Foreground="Gray" IsChecked="True"/>
+                                        <RadioButton Content="Complaint" Foreground="Gray"/>
+                                    </StackPanel>
+                                </Grid>
+                                <Line Stroke="Gray" Stretch="Fill" X2="1"/>
+                                <StackPanel x:Name="RJBCallInformation" Margin="0,5">
+                                    <TextBlock x:Name="SkillLabel" Text="Skill: " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Gray"/>
+                                    <TextBlock x:Name="POSLabel" Text="POS: " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Gray"/>
+                                    <TextBlock x:Name="LanguageLabel" Text="Language: " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Gray"/>
+                                    <TextBlock x:Name="IVRLabel" Text="IVR: " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Gray"/>
+                                    <TextBlock x:Name="CICLabel" Text="CIC: " HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="Gray"/>
+                                    <TextBlock x:Name="DialedNumberLabel" Text="Dialed Number: " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Gray"/>
+
+                                </StackPanel>
+                                <!-- #FFF9F9F9 -->
+                                <!--<Expander x:Name="CallVariablesGroupBox" Header="Call Variables" Foreground="Gray">
+                                <ScrollViewer x:Name="CallVariablesScroll" Margin="10,10" MaxHeight="100">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="3*"/>
+                                            <ColumnDefinition Width="0.3*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" x:Name="CallVariable1Label" Content="Call Var 1" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="0" Grid.Column="1" x:Name="CallVariable1Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="0" Grid.Column="2" x:Name="CallVariable1Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                        <Label Grid.Row="1" Grid.Column="0" x:Name="CallVariable2Label" Content="Call Var 2" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="1" Grid.Column="1" x:Name="CallVariable2Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="1" Grid.Column="2" x:Name="CallVariable2Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                        <Label Grid.Row="2" Grid.Column="0" x:Name="CallVariable3Label" Content="Call Var 3" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="2" Grid.Column="1" x:Name="CallVariable3Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="2" Grid.Column="2" x:Name="CallVariable3Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                        <Label Grid.Row="3" Grid.Column="0" x:Name="CallVariable4Label" Content="Call Var 4" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="3" Grid.Column="1" x:Name="CallVariable4Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="3" Grid.Column="2" x:Name="CallVariable4Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                        <Label Grid.Row="4" Grid.Column="0" x:Name="CallVariable5Label" Content="Call Var 5" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="4" Grid.Column="1" x:Name="CallVariable5Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="4" Grid.Column="2" x:Name="CallVariable5Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                        <Label Grid.Row="5" Grid.Column="0" x:Name="CallVariable6Label" Content="Call Var 6" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="5" Grid.Column="1" x:Name="CallVariable6Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="5" Grid.Column="2" x:Name="CallVariable6Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                        <Label Grid.Row="6" Grid.Column="0" x:Name="CallVariable7Label" Content="Call Var 7" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="6" Grid.Column="1" x:Name="CallVariable7Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="6" Grid.Column="2" x:Name="CallVariable7Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                        <Label Grid.Row="7" Grid.Column="0" x:Name="CallVariable8Label" Content="Call Var 8" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="7" Grid.Column="1" x:Name="CallVariable8Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="7" Grid.Column="2" x:Name="CallVariable8Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                        <Label Grid.Row="8" Grid.Column="0" x:Name="CallVariable9Label" Content="Call Var 9" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="8" Grid.Column="1" x:Name="CallVariable9Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="8" Grid.Column="2" x:Name="CallVariable9Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                        <Label Grid.Row="9" Grid.Column="0" x:Name="CallVariable10Label" Content="Call Var 10" VerticalAlignment="Center"/>
+                                        <Label Grid.Row="9" Grid.Column="1" x:Name="CallVariable10Data" Content="Some Data" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        <Image Grid.Row="9" Grid.Column="2" x:Name="CallVariable10Image" Source="Images/copyData.png" Width="20" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </Expander>
+                            <Expander x:Name="Participants" Header="Participants" Foreground="Gray">
+                                <ListBox x:Name="ParticipantList" HorizontalAlignment="Stretch" Margin="10,10">
+                                    <ListBox.ItemContainerStyle>
+                                        <Style TargetType="{x:Type ListBoxItem}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                        </Style>
+                                    </ListBox.ItemContainerStyle>
+                                    <ListBoxItem>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="34*"/>
+                                                <ColumnDefinition Width="105*"/>
+                                                <ColumnDefinition Width="356*"/>
+                                                <ColumnDefinition Width="230*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Grid.Column="0" Source="Images/holdCall.png" Width="30" Margin="2,0"/>
+                                            <TextBlock Grid.Column="1" Text="00966565151517" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16px" FontWeight="Bold" Grid.ColumnSpan="2" Margin="0,4"/>
+                                            <Button  Grid.Column="3" ToolTip="End Call" HorizontalAlignment="Right" VerticalAlignment="Center" Width="30" Height="30" Click="EndCallClick">
+                                                <Button.Template>
+                                                    <ControlTemplate TargetType="{x:Type Button}">
+                                                        <Grid>
+                                                            <ContentPresenter HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+                                                        </Grid>
+                                                    </ControlTemplate>
+                                                </Button.Template>
+                                                <StackPanel Orientation="Horizontal" >
+                                                    <Image Source="Images/endcall.png"/>
+                                                </StackPanel>
+                                            </Button>
+                                        </Grid>
+                                    </ListBoxItem>
+                                    <ListBoxItem IsSelected="True">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.3*"/>
+                                                <ColumnDefinition Width="4*"/>
+                                                <ColumnDefinition Width="2*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Grid.Column="0" Source="Images/holdCall.png" Width="30"/>
+                                            <TextBlock Grid.Column="1" Text="1201" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16px" FontWeight="Bold"/>
+                                            <Button  Grid.Column="2" ToolTip="End Call" HorizontalAlignment="Right" VerticalAlignment="Center" Width="30" Height="30" Click="EndCallClick">
+                                                <Button.Template>
+                                                    <ControlTemplate TargetType="{x:Type Button}">
+                                                        <Grid>
+                                                            <ContentPresenter HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+                                                        </Grid>
+                                                    </ControlTemplate>
+                                                </Button.Template>
+                                                <StackPanel Orientation="Horizontal" >
+                                                    <Image Source="Images/endcall.png"/>
+                                                </StackPanel>
+                                            </Button>
+                                        </Grid>
+                                    </ListBoxItem>
+                                </ListBox>
+                            </Expander>-->
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <!-- Login Form-->
+        <StackPanel x:Name="LoginScreen" Visibility="Hidden">
+            <Grid HorizontalAlignment="Stretch" x:Name="LoginMessageBar" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" x:Name="UserMessageImageLogin" Source="Images/Error.png" Width="20" Height="20"/>
+                <TextBlock Grid.Column="1" x:Name="UserMessageTextLogin" HorizontalAlignment="Stretch" Background="Red" Foreground="White" Text="Error connecting to server" Margin="5,0"/>
+                <Button Grid.Column="2" ToolTip="Close the error bar" Click="ErrorBarCloseClick">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image  x:Name="UserCloseImageLogin" Source="Images/close.png" Width="20" Height="20" HorizontalAlignment="Right"/>
+                </Button>
+            </Grid>
+            <Grid x:Name="LoginScreenForm" Margin="10,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Agent ID" HorizontalAlignment="Left" VerticalAlignment="Center" x:Name="AgentIDLabel" />
+                <TextBox Grid.Row="0" Grid.Column="1" Text=""  HorizontalAlignment="Stretch" VerticalAlignment="Center" x:Name="AgentIDInfo"  KeyDown="ProcessLoginFromText"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Content="Password" HorizontalAlignment="Left" VerticalAlignment="Center" x:Name="DomainLabel" Height="26" />
+                <PasswordBox Grid.Row="1" Grid.Column="1" Password=""  HorizontalAlignment="Stretch" VerticalAlignment="Center" x:Name="PasswordInfo"  KeyDown="ProcessLoginFromText"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Content="Extension" HorizontalAlignment="Left" VerticalAlignment="Center" x:Name="AgentExtLabel" />
+                <TextBox Grid.Row="2" Grid.Column="1" Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center" x:Name="AgentExtInfo"  KeyDown="ProcessLoginFromText"/>
+
+                <Label Grid.Row="3" Grid.Column="0" Content="Server Side A" HorizontalAlignment="Left" VerticalAlignment="Center" x:Name="ServerSideA"  Visibility="Hidden"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Text="hofinesseaprd.alrajhi.bank" HorizontalAlignment="Stretch" VerticalAlignment="Center" x:Name="DomainAInfo" KeyDown="ProcessLoginFromText" Visibility="Hidden"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Content="Server Side B" HorizontalAlignment="Left" VerticalAlignment="Center" x:Name="ServerSideB" Visibility="Hidden"/>
+                <TextBox Grid.Row="4" Grid.Column="1" Text="hofinessebprd.alrajhi.bank" HorizontalAlignment="Stretch" VerticalAlignment="Center" x:Name="DomainBInfo" KeyDown="ProcessLoginFromText" Visibility="Hidden"/>
+
+                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="LoginButton" Click="LoginClick"  Background="Black" Foreground="White" FontWeight="Black" FontSize="14px" Width="60" Margin="0,20"/>
+            </Grid>
+            <TextBlock Text="Production Version 1.80" VerticalAlignment="Bottom" Foreground="Gray" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel x:Name="LoginLoadingScreen" Visibility="Hidden">
+            <Image gif:AnimationBehavior.SourceUri="Images/Loading.gif" Width="150" Height="150" Margin="0,50"/>
+            <TextBlock x:Name="CurrentLoadingStep" Foreground="Gray" Text="XMPP Connection" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>

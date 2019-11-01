@@ -1,0 +1,15 @@
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\bin\Release\WSDEVC.exe.config
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\bin\Release\WSDEVC.exe
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\bin\Release\WSDEVC.pdb
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\WSDEVC.csprojAssemblyReference.cache
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\MainWindow.g.cs
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\App.g.cs
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\WSDEVC_MarkupCompile.cache
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\WSDEVC_MarkupCompile.lref
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\MainWindow.baml
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\WSDEVC.g.resources
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\WSDEVC.Properties.Resources.resources
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\WSDEVC.csproj.GenerateResource.cache
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\WSDEVC.csproj.CoreCompileInputs.cache
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\WSDEVC.exe
+C:\Users\Mamdouh\source\repos\CXConnect\WSDEVC\obj\Release\WSDEVC.pdb

@@ -1,0 +1,338 @@
+﻿<Window x:Class="FinesseDE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+        xmlns:local="clr-namespace:FinesseDE"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Closing="Window_Closing"
+        Title="Finesse Gadget Desktop Platform V 2.273"
+        MinWidth="600" Icon="Finesse.ico" Padding="0,0" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="{Binding Source={StaticResource CXProperties},Path=BackgroundImage}" Stretch="Fill"/>
+    </Window.Background>
+    <Grid>
+        <Grid Name="Connected" Background="{Binding Source={StaticResource PageBackground}, UpdateSourceTrigger=PropertyChanged}">
+            <Grid.Resources>
+                <ControlTemplate x:Key="ComboBoxTextBox" TargetType="TextBox">
+                    <Border x:Name="PART_ContentHost" Focusable="True" />
+                </ControlTemplate>
+                <Style x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ToggleButton">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="32" />
+                                    </Grid.ColumnDefinitions>
+                                    <Border
+                          x:Name="Border"
+                          Grid.ColumnSpan="2"
+                          CornerRadius="0"
+                          Background="{TemplateBinding Background}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="2" />
+                                    <Border
+                          Grid.Column="0"
+                          CornerRadius="0"
+                          Background="Transparent"
+                          BorderBrush="Transparent"
+                          BorderThickness="10" />
+                                    <Path
+                          x:Name="Arrow"
+                          Grid.Column="1"    
+                          Fill="{TemplateBinding Foreground}"
+                          Stroke="{TemplateBinding Foreground}"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          Data="M 0 0 L 8 12 L 16 0 Z"/>
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter TargetName="Border" Property="Background" Value="LightGray" />
+                                        <Setter TargetName="Border" Property="BorderBrush" Value="Gray" />
+                                        <Setter Property="Foreground" Value="Gray"/>
+                                        <Setter TargetName="Arrow" Property="Fill" Value="Gray" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <ListBox Name="InteractionsToolBar" Grid.Row="0" Background="Transparent" BorderThickness="0" ItemsSource="{Binding Path=AgentInformation.Dialogs}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Padding="10,5" MaxHeight="135" SelectedValue="{Binding Path=AgentInformation.SelectedDialog,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="InteractionsToolBar_SelectionChanged">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" IsItemsHost="false" VerticalAlignment="Top"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.Resources>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Grid Name="Panel" Margin="1,0">
+                                        <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Content"
+                                        Margin="5,5"/>
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="False">
+                                            <Setter Property="Foreground" Value="{Binding Source={StaticResource DialogForground},UpdateSourceTrigger=PropertyChanged}"/>
+                                            <Setter Property="FontWeight" Value="Bold"/>
+                                            <Setter TargetName="Panel" Property="Background" Value="{Binding Source={StaticResource DialogBackground},UpdateSourceTrigger=PropertyChanged}"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Foreground" Value="{Binding Source={StaticResource SelectedDialogForground},UpdateSourceTrigger=PropertyChanged}"/>
+                                            <Setter Property="FontWeight" Value="Bold"/>
+                                            <Setter TargetName="Panel" Property="Background" Value="{Binding Source={StaticResource SelectedDialogBackground}, UpdateSourceTrigger=PropertyChanged}"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.Resources>
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid MinWidth="380">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <WrapPanel Grid.Column="0">
+                                <TextBlock Text="(" Margin="0,5"/>
+                                <TextBlock Text="{Binding Path=DialogStateTimer.TimerLabel}" Margin="2,5"/>
+                                <TextBlock Text=")" Margin="0,5"/>
+                                <TextBlock Text="{Binding Header}" Margin="0,5"/>
+                            </WrapPanel>
+                            <WrapPanel Grid.Column="1" HorizontalAlignment="Right">
+                                <Button Tag="{Binding ID}" ToolTip="Answer" Name="Answer" Background="Transparent" BorderBrush="Transparent" Visibility="{Binding Answer, Converter={StaticResource BoolToVisConverter}}" Click="CallButton_Click">
+                                    <Image Source="Images/answercall.png" Width="25" Height="25" />
+                                </Button>
+                                <Button Tag="{Binding ID}" ToolTip="Direct Transfer" Name="Transfer" Background="Transparent" BorderBrush="Transparent" Visibility="{Binding Transfer, Converter={StaticResource BoolToVisConverter}}" Click="CallButton_Click">
+                                    <Image Source="Images/transfercall.png" Width="25" Height="25"/>
+                                </Button>
+                                <Button Tag="{Binding ID}" ToolTip="Transfer" Name="CTransfer" Background="Transparent" BorderBrush="Transparent" Visibility="{Binding CTransfer, Converter={StaticResource BoolToVisConverter}}" Click="CallButton_Click">
+                                    <Image Source="Images/transfercall.png" Width="25" Height="25"/>
+                                </Button>
+
+                                <Button Tag="{Binding ID}" ToolTip="Consult" Name="Consult" Background="Transparent" BorderBrush="Transparent" Visibility="{Binding Consult, Converter={StaticResource BoolToVisConverter}}" Click="CallButton_Click">
+                                    <Image Source="Images/consultcall.png" Width="25" Height="25"/>
+                                </Button>
+                                <Button Tag="{Binding ID}" ToolTip="Conference" Name="Conference" Background="Transparent" BorderBrush="Transparent" Visibility="{Binding Conference, Converter={StaticResource BoolToVisConverter}}" Click="CallButton_Click">
+                                    <Image Source="Images/conferencecall.png" Width="25" Height="25"/>
+                                </Button>
+                                <Button Tag="{Binding ID}" ToolTip="Keypad" Name="Keypad" Background="Transparent" BorderBrush="Transparent" Visibility="{Binding SendDTMF, Converter={StaticResource BoolToVisConverter}}" Click="CallButton_Click">
+                                    <Image Source="Images/keypadcall.png" Width="25" Height="25"/>
+                                </Button>
+                                <Button Tag="{Binding ID}" ToolTip="Hold" Name="Hold" Background="Transparent" BorderBrush="Transparent" Visibility="{Binding Hold, Converter={StaticResource BoolToVisConverter}}" Click="CallButton_Click">
+                                    <Image Source="Images/holdcall.png" Width="25" Height="25"/>
+                                </Button>
+                                <Button Tag="{Binding ID}" ToolTip="Resume" Name="Resume" Background="Transparent" BorderBrush="Transparent" Visibility="{Binding Resume, Converter={StaticResource BoolToVisConverter}}" Click="CallButton_Click">
+                                    <Image Source="Images/resumecall.png" Width="25" Height="25"/>
+                                </Button>
+                                <Button Tag="{Binding ID}" ToolTip="Release" Name="Release" Background="Transparent" BorderBrush="Transparent" Visibility="{Binding Release, Converter={StaticResource BoolToVisConverter}}" Click="CallButton_Click">
+                                    <Image Source="Images/releasecall.png" Width="25" Height="25"/>
+                                </Button>
+                            </WrapPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Grid Grid.Row="1" Background="{Binding Source={StaticResource AgentStatusbarBackground}, UpdateSourceTrigger=PropertyChanged}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Name="DialPad" Height="auto" Visibility="Collapsed" Background="{Binding Source={StaticResource DialpadBackground}, UpdateSourceTrigger=PropertyChanged}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <WrapPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Background="Transparent">
+                            <TextBox MinWidth="150" MaxWidth="150" Padding="5,2" Margin="5,5" Name="DialNumber"/>
+                            <Button Name="Keypad_1" Content="1" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_2" Content="2" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_3" Content="3" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_4" Content="4" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_5" Content="5" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_6" Content="6" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_7" Content="7" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_8" Content="8" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_9" Content="9" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_0" Content="0" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_start" Content="*" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <Button Name="Keypad_hash" Content="#" FontSize="18" FontWeight="Black" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Background="Transparent" Padding="5,0" Margin="2,2" BorderBrush="White" MinWidth="25" Click="DialPad_Click"/>
+                            <GridSplitter Width="2" VerticalAlignment="Stretch" Background="{Binding Source={StaticResource SparatorColor}, UpdateSourceTrigger=PropertyChanged}" Margin="5,2"/>
+                            <Button Name="Clear" Content="Clear" Background="{Binding Source={StaticResource DialpadBackground}, UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Padding="10,3" Margin="5,5" FontWeight="Bold" BorderBrush="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" MinWidth="55" Click="DialPad_Click"/>
+                            <Button Name="Dial" Content="Dial" Background="{Binding Source={StaticResource DialpadBackground}, UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" Padding="10,3" Margin="5,5" FontWeight="Bold" BorderBrush="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" MinWidth="55" Click="DialPad_Click"/>
+                        </WrapPanel>
+                        <WrapPanel HorizontalAlignment="Right"  Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">
+                            <Button Name="CloseDialPad" Content="×" Background="{Binding Source={StaticResource DialpadBackground}, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" Foreground="{Binding Source={StaticResource DialpadForground},UpdateSourceTrigger=PropertyChanged}" FontSize="20" Padding="8,0" Margin="0,0" Click="DialPad_Click"/>
+                        </WrapPanel>
+                        <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="2" HorizontalAlignment="Stretch" Background="{Binding Source={StaticResource CXProperties}, Path=SplitterBackground, UpdateSourceTrigger=PropertyChanged}" Margin="5,2"/>
+                    </Grid>
+                </Grid>
+                <WrapPanel Name="StatusPanel" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Center" Background="{Binding Source={StaticResource AgentStatusbarBackground}, UpdateSourceTrigger=PropertyChanged}">
+                    <ComboBox Name="StatusComboBox" ItemsSource="{Binding Path=AgentInformation.VoiceStatusList}" Margin="10,2" VerticalAlignment="Center" VerticalContentAlignment="Center" SelectedValue="{Binding Path=AgentInformation.SelectedVoiceStatus,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="VoiceStatus_SelectionChanged">
+                        <ComboBox.Resources>
+                            <Style TargetType="ComboBox">
+                                <Setter Property="Foreground" Value="{Binding Source={StaticResource AgentStatusbarBackground},UpdateSourceTrigger=PropertyChanged}" />
+                                <Setter Property="BorderBrush" Value="{Binding Source={StaticResource AgentStatusbarBackground},UpdateSourceTrigger=PropertyChanged}" />
+                                <Setter Property="Background" Value="White" />
+                                <Setter Property="SnapsToDevicePixels" Value="true"/>
+                                <Setter Property="OverridesDefaultStyle" Value="true"/>
+                                <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+                                <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+                                <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="MinWidth" Value="300"/>
+                                <Setter Property="MaxHeight" Value="32"/>
+                                <Setter Property="MinHeight" Value="32"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ComboBox">
+                                            <Grid>
+                                                <ToggleButton
+                            Name="ToggleButton"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Background="{TemplateBinding Background}"
+                        Foreground="{TemplateBinding Foreground}"
+                            Style="{StaticResource ComboBoxToggleButton}"
+                            Grid.Column="2"
+                            Focusable="false"
+                            IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press">
+                                                </ToggleButton>
+                                                <ContentPresenter
+                            Name="ContentSite"
+                            IsHitTestVisible="False"
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="10,3,30,3"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" />
+                                                <TextBox x:Name="PART_EditableTextBox"
+                            Style="{x:Null}"
+                            Template="{StaticResource ComboBoxTextBox}"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="3,3,23,3"
+                            Focusable="True"                               
+                            Visibility="Hidden"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                                                <Popup
+                            Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True"
+                            Focusable="False"
+                            PopupAnimation="Slide">
+                                                    <Grid
+                              Name="DropDown"
+                              SnapsToDevicePixels="True"               
+                              MinWidth="{TemplateBinding ActualWidth}"
+                              MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                                        <Border
+                                    x:Name="DropDownBorder"
+                                    Background="White"
+                                    BorderThickness="2"
+                                    BorderBrush="{Binding Source={StaticResource AgentStatusbarBackground},UpdateSourceTrigger=PropertyChanged}"/>
+                                                        <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                                            <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                                        </ScrollViewer>
+                                                    </Grid>
+                                                </Popup>
+
+                                            </Grid>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="HasItems" Value="false">
+                                                    <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                                                </Trigger>
+                                                <Trigger Property="IsGrouping" Value="true">
+                                                    <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                                                </Trigger>
+                                                <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                                                    <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="0"/>
+                                                    <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                                                </Trigger>
+                                                <Trigger Property="IsEditable" Value="true">
+                                                    <Setter Property="IsTabStop" Value="false"/>
+                                                    <Setter TargetName="PART_EditableTextBox" Property="Visibility"    Value="Visible"/>
+                                                    <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                </Style.Triggers>
+                            </Style>
+                        </ComboBox.Resources>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Image Source="{Binding StatusImage}" Width="22"/>
+                                    <TextBlock Text="{Binding StatusLabel}"/>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <GridSplitter Width="2" VerticalAlignment="Stretch" Background="{Binding Source={StaticResource SplitterBackground}, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Label Content="{Binding Path=StateTimer.TimerLabel}" FontWeight="Bold" Foreground="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}" FontSize="18" Padding="5,0" Margin="0,5" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+                    <GridSplitter Width="2" VerticalAlignment="Stretch" Background="{Binding Source={StaticResource SplitterBackground}, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Label Content="Ext" FontWeight="Bold" Foreground="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}" Padding="5,0" Margin="0,5" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Content="{Binding Path=AgentInformation.Extension}" FontWeight="Bold" Foreground="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}" Padding="5,0" Margin="0,5" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+
+                </WrapPanel>
+                <WrapPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Background="{Binding Source={StaticResource AgentStatusbarBackground}, UpdateSourceTrigger=PropertyChanged}">
+                    <Button Name="MakeCall" Content="Make Call" Background="{Binding Source={StaticResource AgentStatusbarBackground},UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}" Padding="10,0" Margin="5,5" FontWeight="Bold" BorderBrush="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}" Click="MakeCall_Click" Visibility="{Binding AgentInformation.MakeCallVisible,Converter={StaticResource BoolToVisConverter},UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridSplitter Width="2" VerticalAlignment="Stretch" Background="{Binding Source={StaticResource SplitterBackground}, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Menu Background="{Binding Source={StaticResource AgentStatusbarBackground},UpdateSourceTrigger=PropertyChanged}">
+                        <MenuItem>
+                            <MenuItem.Header>
+                                <TextBlock Text="≡" FontWeight="ExtraBold" FontSize="26" Foreground="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}"/>
+                            </MenuItem.Header>
+                            <MenuItem Tag="0" Header="Teams" Background="{Binding Source={StaticResource AgentStatusbarBackground},UpdateSourceTrigger=PropertyChanged}" Opacity="1" Foreground="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}" Click="MenuItem_Selected"/>
+                            <MenuItem Tag="1" Header="Activities" Background="{Binding Source={StaticResource AgentStatusbarBackground},UpdateSourceTrigger=PropertyChanged}" Opacity="0.8" Foreground="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}" Click="MenuItem_Selected"/>
+                            <MenuItem Tag="2" Header="Setting" Background="{Binding Source={StaticResource AgentStatusbarBackground},UpdateSourceTrigger=PropertyChanged}" Opacity="0.8" Foreground="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}" Click="MenuItem_Selected"/>
+                            <MenuItem Tag="3" Header="Debug" Background="{Binding Source={StaticResource AgentStatusbarBackground},UpdateSourceTrigger=PropertyChanged}" Opacity="0.8" Foreground="{Binding Source={StaticResource AgentStatusbarForground},UpdateSourceTrigger=PropertyChanged}" Click="MenuItem_Selected"/>
+                        </MenuItem>
+                    </Menu>
+                </WrapPanel>
+            </Grid>
+            <Grid Grid.Row="2" Name="MainGrid"/>
+            <StatusBar Grid.Row="3" Name="Statusbar" Height="30" VerticalAlignment="Bottom" Background="{Binding Source={StaticResource StatusbarBackground},UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Source={StaticResource StatusbarForground},UpdateSourceTrigger=PropertyChanged}">
+                    <TextBlock Name="CurrentStatus" Text="Agent logged in ..." TextWrapping="NoWrap"/>
+            </StatusBar>
+        </Grid>
+        <Grid Name="Reconnect"  Opacity="1" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center" MaxHeight="400" MaxWidth="600">
+            <Image gif:AnimationBehavior.SourceUri="Images/Somloading.gif" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="{Binding LoadingMessage}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="Black" FontWeight="Bold" Background="White" Margin="0,10"/>
+        </Grid>
+    </Grid>
+</Window>

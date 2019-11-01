@@ -1,0 +1,101 @@
+﻿<Window x:Class="FinesseDE.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinesseDE"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="FGDP V2.281" MinWidth="350" MaxWidth="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/background.jpg" Stretch="Fill"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="10,10">
+            <StackPanel>
+                <Grid Margin="10,10,10,2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Agent ID" Foreground="White"/>
+                    <TextBox Grid.Column="1" Text="{Binding Path=AgentInformation.AgentID}" Height="22"/>
+                </Grid>
+                <Grid Margin="10,2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Password" Foreground="White"/>
+                    <PasswordBox Grid.Column="1" Name="Password" Height="22"/>
+                </Grid>
+                <Grid Margin="10,2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Extension" Foreground="White"/>
+                    <TextBox Grid.Column="1" Text="{Binding Path=AgentInformation.Extension}" Height="22"/>
+                </Grid>
+                <Expander Header="Details" Margin="10,5,10,10" Background="Transparent" Foreground="White">
+                    <StackPanel Background="Transparent">
+                        <Grid Margin="0,2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Grid.Row="0" Content="Server A" Foreground="white"/>
+                            <TextBox Grid.Column="1" Grid.Row ="0" Text="{Binding Path=AgentInformation.DomainA}" Height="22"/>
+                            <Label Grid.Column="0" Grid.Row="1" Content="Server B" Foreground="white"/>
+                            <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Path=AgentInformation.DomainB}" Height="22"/>
+                            <Label Grid.Column="0" Grid.Row="2" Content="XMPP Port" Foreground="white"/>
+                            <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Path=AgentInformation.XMPPPort}" Height="22"/>
+                            <Label Grid.Column="0" Grid.Row="3" Content="XMPP Url Suffix" Foreground="white"/>
+                            <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Path=AgentInformation.XMPPURL}" Height="22"/>
+                            <Label Grid.Column="0" Grid.Row="4" Content="Http Port" Foreground="white"/>
+                            <TextBox Grid.Column="1" Grid.Row="4" Text="{Binding Path=AgentInformation.HTTPPort}" Height="22"/>
+                            <Label Grid.Column="0" Grid.Row="5" Content="Http Url Suffix" Foreground="white"/>
+                            <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding Path=AgentInformation.HTTPURL}" Height="22"/>
+                        </Grid>
+                        <CheckBox Name="SSL" Content="SSL" Margin="10,2,10,5" Foreground="white" IsChecked="{Binding Path=AgentInformation.SSL}"/>
+                        <WrapPanel Margin="10,2,10,5" Visibility="{Binding Path=AgentInformation.SSL, Converter={StaticResource BoolToVisConverter}}">
+                            <Label Content="XMPP SSL" Foreground="White" Width="100"/>
+                            <RadioButton Content="Ssl3 " Foreground="White" Margin="0,5" IsChecked="{Binding Path=AgentInformation.XMPPConnectionType,Converter={StaticResource ParamToStringConverter},ConverterParameter=Ssl3}"/>
+                            <RadioButton Content="Tls " Foreground="White" Margin="0,5" IsChecked="{Binding Path=AgentInformation.XMPPConnectionType,Converter={StaticResource ParamToStringConverter},ConverterParameter=Tls}"/>
+                            <RadioButton Content="Tls11 " Foreground="White" Margin="0,5" IsChecked="{Binding Path=AgentInformation.XMPPConnectionType,Converter={StaticResource ParamToStringConverter},ConverterParameter=Tls11}"/>
+                            <RadioButton Content="Tls12 " Foreground="White" Margin="0,5" IsChecked="{Binding Path=AgentInformation.XMPPConnectionType,Converter={StaticResource ParamToStringConverter},ConverterParameter=Tls12}"/>
+                        </WrapPanel>
+                        <WrapPanel Margin="10,2,10,10" Visibility="{Binding Path=AgentInformation.SSL, Converter={StaticResource BoolToVisConverter}}">
+                            <Label Content="HTTP SSL" Foreground="White" Width="100"/>
+                            <RadioButton Content="Ssl3 " Foreground="White" Margin="0,5" IsChecked="{Binding Path=AgentInformation.HTTPConnectionType,Converter={StaticResource ParamToStringConverter},ConverterParameter=Ssl3}"/>
+                            <RadioButton Content="Tls " Foreground="White" Margin="0,5" IsChecked="{Binding Path=AgentInformation.HTTPConnectionType,Converter={StaticResource ParamToStringConverter},ConverterParameter=Tls}"/>
+                            <RadioButton Content="Tls11 " Foreground="White" Margin="0,5" IsChecked="{Binding Path=AgentInformation.HTTPConnectionType,Converter={StaticResource ParamToStringConverter},ConverterParameter=Tls11}"/>
+                            <RadioButton Content="Tls12 " Foreground="White" Margin="0,5" IsChecked="{Binding Path=AgentInformation.HTTPConnectionType,Converter={StaticResource ParamToStringConverter},ConverterParameter=Tls12}"/>
+                        </WrapPanel>
+                    </StackPanel>
+                </Expander>
+                <CheckBox Name="SavePassword" Content="Save password" Margin="10,2,10,10" Foreground="white"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Margin="30,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Close" HorizontalAlignment="left" VerticalAlignment="Center" Padding="20,3" Background="{Binding Source={StaticResource StatusbarBackground},UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Source={StaticResource StatusbarForground},UpdateSourceTrigger=PropertyChanged}" FontWeight="ExtraBold" Click="Close_Click"/>
+            <Button Grid.Column="1" Content="Login" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="20,3" Background="{Binding Source={StaticResource StatusbarBackground},UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding Source={StaticResource StatusbarForground},UpdateSourceTrigger=PropertyChanged}" FontWeight="ExtraBold" Click="Login_Click"/>
+        </Grid>
+    </Grid>
+</Window>

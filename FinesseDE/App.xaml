@@ -1,0 +1,36 @@
+﻿<Application x:Class="FinesseDE.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FinesseDE"
+             StartupUri="Login.xaml">
+    <Application.Resources>
+        <local:ParamToStringConverter x:Key="ParamToStringConverter"/>
+        <BooleanToVisibilityConverter x:Key="BoolToVisConverter" />
+        <local:CXProperties x:Key="CXProperties"/>
+        <SolidColorBrush x:Key="PageBackground" Color="{Binding Source={StaticResource CXProperties}, Path=PageBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="AgentStatusbarBackground" Color="{Binding Source={StaticResource CXProperties}, Path=AgentStatusbarBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="StatusbarBackground" Color="{Binding Source={StaticResource CXProperties}, Path=StatusbarBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="DialpadBackground" Color="{Binding Source={StaticResource CXProperties}, Path=DialpadBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="DialogBackground" Color="{Binding Source={StaticResource CXProperties}, Path=DialogBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="SelectedDialogBackground" Color="{Binding Source={StaticResource CXProperties}, Path=SelectedDialogBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="TabBackground" Color="{Binding Source={StaticResource CXProperties}, Path=TabBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="TabHeaderBackground" Color="{Binding Source={StaticResource CXProperties}, Path=TabHeaderBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="SelectedHeaderTabBackground" Color="{Binding Source={StaticResource CXProperties}, Path=SelectedHeaderTabBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="SplitterBackground" Color="{Binding Source={StaticResource CXProperties}, Path=SplitterBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="SparatorColor" Color="{Binding Source={StaticResource CXProperties}, Path=SparatorColor, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="GadgetBackground" Color="{Binding Source={StaticResource CXProperties}, Path=GadgetBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="GadgetHeaderBackground" Color="{Binding Source={StaticResource CXProperties}, Path=GadgetHeaderBackground, UpdateSourceTrigger=PropertyChanged}"/>
+        
+        <SolidColorBrush x:Key="PageForground" Color="{Binding Source={StaticResource CXProperties}, Path=PageForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="AgentStatusbarForground" Color="{Binding Source={StaticResource CXProperties}, Path=AgentStatusbarForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="StatusbarForground" Color="{Binding Source={StaticResource CXProperties}, Path=StatusbarForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="DialpadForground" Color="{Binding Source={StaticResource CXProperties}, Path=DialpadForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="DialogForground" Color="{Binding Source={StaticResource CXProperties}, Path=DialogForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="SelectedDialogForground" Color="{Binding Source={StaticResource CXProperties}, Path=SelectedDialogForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="TabForground" Color="{Binding Source={StaticResource CXProperties}, Path=TabForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="TabHeaderForground" Color="{Binding Source={StaticResource CXProperties}, Path=TabHeaderForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="SelectedHeaderTabForground" Color="{Binding Source={StaticResource CXProperties}, Path=SelectedHeaderTabForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="GadgetForground" Color="{Binding Source={StaticResource CXProperties}, Path=GadgetForground, UpdateSourceTrigger=PropertyChanged}"/>
+        <SolidColorBrush x:Key="GadgetHeaderForground" Color="{Binding Source={StaticResource CXProperties}, Path=GadgetHeaderForground, UpdateSourceTrigger=PropertyChanged}"/>
+    </Application.Resources>
+</Application>

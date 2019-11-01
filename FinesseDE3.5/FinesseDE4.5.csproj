@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75414A13-A44C-4E45-8D0A-BA7922DF837C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinesseDE</RootNamespace>
+    <AssemblyName>FinesseDE</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>36</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Finesse.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FinesseDE.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CFB4B8E06B4819ABC908777B651BC49F1B9582C1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FinesseDE3.5_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.17\lib\net\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CXProperties.cs" />
+    <Compile Include="FinesseDE.xaml.cs">
+      <DependentUpon>FinesseDE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionSpace.xaml.cs">
+      <DependentUpon>InteractionSpace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogWriter.cs" />
+    <Compile Include="MenuSpace.xaml.cs">
+      <DependentUpon>MenuSpace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InteractionSpaceModel.cs" />
+    <Compile Include="Models\MenuSpaceModel.cs" />
+    <Compile Include="ParamToStringConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\answercall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\answercall_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\conferencecall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\conferencecall_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\consultcall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\consultcall_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\copydata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Default.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop\Desktop9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\endcall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\holdcall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\holdcall_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ivrcall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ivrcall_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\keypadcall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\keypadcall_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NotReady.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\preloader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ready.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\releasecall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\releasecall_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reserved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\resumecall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\resumecall_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Somloading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\transfercall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\transfercall_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="FinesseDE3.5_TemporaryKey.pfx" />
+    <None Include="FinesseDE_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Finesse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="FinesseDE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InteractionSpace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Loading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuSpace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinesseClient3.5\FinesseClient4.5.csproj">
+      <Project>{858699dc-f4a0-4242-b3d4-4e2c0a5c05d1}</Project>
+      <Name>FinesseClient4.5</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

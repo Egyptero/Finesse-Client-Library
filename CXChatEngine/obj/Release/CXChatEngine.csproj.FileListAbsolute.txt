@@ -1,0 +1,9 @@
+C:\Users\Mamdouh\source\repos\CXConnect\CXChatEngine\bin\Release\CXChatEngine.exe.config
+C:\Users\Mamdouh\source\repos\CXConnect\CXChatEngine\bin\Release\CXChatEngine.exe
+C:\Users\Mamdouh\source\repos\CXConnect\CXChatEngine\bin\Release\CXChatEngine.pdb
+C:\Users\Mamdouh\source\repos\CXConnect\CXChatEngine\obj\Release\CXChatEngine.XMPPManager.resources
+C:\Users\Mamdouh\source\repos\CXConnect\CXChatEngine\obj\Release\CXChatEngine.Properties.Resources.resources
+C:\Users\Mamdouh\source\repos\CXConnect\CXChatEngine\obj\Release\CXChatEngine.csproj.GenerateResource.cache
+C:\Users\Mamdouh\source\repos\CXConnect\CXChatEngine\obj\Release\CXChatEngine.csproj.CoreCompileInputs.cache
+C:\Users\Mamdouh\source\repos\CXConnect\CXChatEngine\obj\Release\CXChatEngine.exe
+C:\Users\Mamdouh\source\repos\CXConnect\CXChatEngine\obj\Release\CXChatEngine.pdb

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EBEEEC8-7F0B-46D3-A6D6-3E9F151CCE5C}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinesseUSDConnector</RootNamespace>
+    <AssemblyName>FinesseUSDConnector</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="microsoft.crm.sdk.proxy">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.CoreAssemblies.7.1.0\lib\net45\microsoft.crm.sdk.proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.UnifiedServiceDesk.BaseControl">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.USD.CoreAssemblies.7.1.0\lib\net45\Microsoft.Crm.UnifiedServiceDesk.BaseControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.UnifiedServiceDesk.CommonUtility">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.USD.CoreAssemblies.7.1.0\lib\net45\Microsoft.Crm.UnifiedServiceDesk.CommonUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.UnifiedServiceDesk.Dynamics">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.USD.CoreAssemblies.7.1.0\lib\net45\Microsoft.Crm.UnifiedServiceDesk.Dynamics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.AifServices">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.CommonAssemblies.7.1.0\lib\net45\Microsoft.Uii.AifServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Common">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.CommonAssemblies.7.1.0\lib\net45\Microsoft.Uii.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Csr.Core">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.CommonAssemblies.7.1.0\lib\net45\Microsoft.Uii.Csr.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Desktop.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.DesktopAssemblies.7.1.0\lib\net45\Microsoft.Uii.Desktop.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Desktop.Cti.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.DesktopAssemblies.7.1.0\lib\net45\Microsoft.Uii.Desktop.Cti.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Desktop.SessionManager">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.DesktopAssemblies.7.1.0\lib\net45\Microsoft.Uii.Desktop.SessionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Desktop.UI.Controls">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.DesktopAssemblies.7.1.0\lib\net45\Microsoft.Uii.Desktop.UI.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Desktop.UI.Controls.Wpf">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.DesktopAssemblies.7.1.0\lib\net45\Microsoft.Uii.Desktop.UI.Controls.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Desktop.UI.Core">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.DesktopAssemblies.7.1.0\lib\net45\Microsoft.Uii.Desktop.UI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Desktop.UI.Wpf">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.DesktopAssemblies.7.1.0\lib\net45\Microsoft.Uii.Desktop.UI.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Practices.CompositeUI">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.DesktopAssemblies.7.1.0\lib\net45\Microsoft.Uii.Practices.CompositeUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Uii.Practices.CompositeUI.Windows">
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.UII.DesktopAssemblies.7.1.0\lib\net45\Microsoft.Uii.Practices.CompositeUI.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.xrm.sdk">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.CoreAssemblies.7.1.0\lib\net45\microsoft.xrm.sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Deployment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.Deployment.7.1.0\lib\net45\Microsoft.Xrm.Sdk.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.xrm.sdk.workflow">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.Workflow.7.1.0\lib\net45\microsoft.xrm.sdk.workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Tooling.Connector">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)\packages\Microsoft.CrmSdk.XrmTooling.CoreAssembly.7.1.0\lib\net45\Microsoft.Xrm.Tooling.Connector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="USDControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="USDControl.xaml.cs">
+      <DependentUpon>USDControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

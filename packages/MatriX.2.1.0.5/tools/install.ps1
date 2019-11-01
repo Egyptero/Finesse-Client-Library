@@ -1,0 +1,1 @@
+﻿$DTE.ItemOperations.Navigate("http://www.ag-software.net/matrix-xmpp-sdk/get-started/")

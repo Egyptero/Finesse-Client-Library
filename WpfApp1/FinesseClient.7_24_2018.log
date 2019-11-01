@@ -1,0 +1,3318 @@
+
+Log Entry : 5:52:43 PM Tuesday, July 24, 2018  :  :Agent login requested-------------------------------
+
+Log Entry : 5:52:43 PM Tuesday, July 24, 2018  :  :Agent information is valid,-------------------------------
+
+Log Entry : 5:52:43 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object Initiation-------------------------------
+
+Log Entry : 5:52:43 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object is ready-------------------------------
+
+Log Entry : 5:52:43 PM Tuesday, July 24, 2018  :  :XMPP Connect to side : finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 5:52:44 PM Tuesday, July 24, 2018  :  :Waiting XMPP Server Response on IP : https://finesse1.dcloud.cisco.com:7443/http-bind/-------------------------------
+
+Log Entry : 5:52:45 PM Tuesday, July 24, 2018  :  :XMPP Login Completed-------------------------------
+
+Log Entry : 5:52:46 PM Tuesday, July 24, 2018  :  :JID: 1071@finesse1.dcloud.cisco.com/cisco-------------------------------
+
+Log Entry : 5:52:46 PM Tuesday, July 24, 2018  :  :Connecting Rest on side: finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 5:52:47 PM Tuesday, July 24, 2018  :  :Rest connected to side: https://finesse1.dcloud.cisco.com:8445/finesse-------------------------------
+
+Log Entry : 5:52:47 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:52:47 PM Tuesday, July 24, 2018  :  :Loading not ready reason code-------------------------------
+
+Log Entry : 5:52:47 PM Tuesday, July 24, 2018  :  :Loading logout reason code-------------------------------
+
+Log Entry : 5:52:47 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:52:47 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:52:47 PM Tuesday, July 24, 2018  :  :Loading System Information from rest API-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Loading Queue Information from rest API-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_CALLBACK</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Central</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5070543</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Gold</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9342036</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>EIM_OUTBOUND</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9323350</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_East</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/792653</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Default</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/13886819</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_DELAYED</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_West</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/11819537</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_EIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/0</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_WIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/2</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Diamond</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4589316</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Platinum</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/10273946</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_3G</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/8571066</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:52:48 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:52:49 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:52:49 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Agent logout requested-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__gCIpT">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1092">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension></extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>LOGOUT</category>
+                    <code>98</code>
+                    <forAll>true</forAll>
+                    <id>4</id>
+                    <label>Lunch</label>
+                    <uri>/finesse/api/ReasonCode/4</uri>
+                  </reasonCode>
+                  <reasonCodeId>4</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>LOGOUT</state>
+                  <stateChangeTime>2018-07-24T15:52:56.797Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 5:52:57 PM Tuesday, July 24, 2018  :  :XMPP will disconnect now-------------------------------
+
+Log Entry : 5:52:58 PM Tuesday, July 24, 2018  :  :XMPP Closing Connection .. : Matrix.EventArgs-------------------------------
+
+Log Entry : 5:53:05 PM Tuesday, July 24, 2018  :  :Agent login requested-------------------------------
+
+Log Entry : 5:53:05 PM Tuesday, July 24, 2018  :  :Agent information is valid,-------------------------------
+
+Log Entry : 5:53:05 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object Reinitializing-------------------------------
+
+Log Entry : 5:53:05 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object Reinitialized-------------------------------
+
+Log Entry : 5:53:05 PM Tuesday, July 24, 2018  :  :XMPP Connect to side : finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 5:53:05 PM Tuesday, July 24, 2018  :  :Waiting XMPP Server Response on IP : https://finesse1.dcloud.cisco.com:7443/http-bind/-------------------------------
+
+Log Entry : 5:53:06 PM Tuesday, July 24, 2018  :  :XMPP Login Completed-------------------------------
+
+Log Entry : 5:53:07 PM Tuesday, July 24, 2018  :  :JID: 1071@finesse1.dcloud.cisco.com/cisco-------------------------------
+
+Log Entry : 5:53:07 PM Tuesday, July 24, 2018  :  :Connecting Rest on side: finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 5:53:07 PM Tuesday, July 24, 2018  :  :Rest connected to side: https://finesse1.dcloud.cisco.com:8445/finesse-------------------------------
+
+Log Entry : 5:53:07 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Loading System Information from rest API-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Loading Queue Information from rest API-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_CALLBACK</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Central</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5070543</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Gold</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9342036</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>EIM_OUTBOUND</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9323350</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_East</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/792653</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Default</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/13886819</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_DELAYED</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_West</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/11819537</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_EIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/0</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_WIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/2</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Diamond</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4589316</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Platinum</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/10273946</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_3G</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/8571066</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:08 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 5:53:16 PM Tuesday, July 24, 2018  :  :Agent change status to: READY, and reason code: -------------------------------
+
+Log Entry : 5:53:16 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__J056a">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1102">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension>1071</extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>READY</state>
+                  <stateChangeTime>2018-07-24T15:53:15.798Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 5:53:16 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:16 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:16 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:22 PM Tuesday, July 24, 2018  :  :Agent change status to: NOT_READY, and reason code: Paper Work-------------------------------
+
+Log Entry : 5:53:22 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__D3EwC">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1104">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension>1071</extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>NOT_READY</category>
+                    <code>4</code>
+                    <forAll>true</forAll>
+                    <id>2</id>
+                    <label>Paper Work</label>
+                    <uri>/finesse/api/ReasonCode/2</uri>
+                  </reasonCode>
+                  <reasonCodeId>2</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>NOT_READY</state>
+                  <stateChangeTime>2018-07-24T15:53:21.766Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 5:53:22 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:22 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:22 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:26 PM Tuesday, July 24, 2018  :  :Agent logout requested-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__16MI0">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1106">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension></extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>LOGOUT</category>
+                    <code>99</code>
+                    <forAll>true</forAll>
+                    <id>5</id>
+                    <label>End of shift</label>
+                    <uri>/finesse/api/ReasonCode/5</uri>
+                  </reasonCode>
+                  <reasonCodeId>5</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>LOGOUT</state>
+                  <stateChangeTime>2018-07-24T15:53:26.384Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :XMPP will disconnect now-------------------------------
+
+Log Entry : 5:53:27 PM Tuesday, July 24, 2018  :  :XMPP Closing Connection .. : Matrix.EventArgs-------------------------------
+
+Log Entry : 5:53:34 PM Tuesday, July 24, 2018  :  :Agent login requested-------------------------------
+
+Log Entry : 5:53:34 PM Tuesday, July 24, 2018  :  :Agent information is valid,-------------------------------
+
+Log Entry : 5:53:34 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object Reinitializing-------------------------------
+
+Log Entry : 5:53:34 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object Reinitialized-------------------------------
+
+Log Entry : 5:53:34 PM Tuesday, July 24, 2018  :  :XMPP Connect to side : finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 5:53:34 PM Tuesday, July 24, 2018  :  :Waiting XMPP Server Response on IP : https://finesse1.dcloud.cisco.com:7443/http-bind/-------------------------------
+
+Log Entry : 5:53:35 PM Tuesday, July 24, 2018  :  :XMPP Login Completed-------------------------------
+
+Log Entry : 5:53:36 PM Tuesday, July 24, 2018  :  :JID: 1071@finesse1.dcloud.cisco.com/cisco-------------------------------
+
+Log Entry : 5:53:36 PM Tuesday, July 24, 2018  :  :Connecting Rest on side: finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Rest connected to side: https://finesse1.dcloud.cisco.com:8445/finesse-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Loading System Information from rest API-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Loading Queue Information from rest API-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_CALLBACK</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Central</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5070543</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Gold</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9342036</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>EIM_OUTBOUND</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9323350</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_East</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/792653</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Default</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/13886819</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_DELAYED</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_West</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/11819537</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_EIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/0</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_WIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/2</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Diamond</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4589316</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Platinum</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/10273946</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_3G</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/8571066</uri>
+</Queue>-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 5:53:37 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 5:53:38 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 5:53:38 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 5:53:38 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:38 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:38 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:38 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 5:53:43 PM Tuesday, July 24, 2018  :  :Agent change status to: READY, and reason code: -------------------------------
+
+Log Entry : 5:53:43 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__1eH5G">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1116">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension>1071</extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>READY</state>
+                  <stateChangeTime>2018-07-24T15:53:42.967Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 5:53:43 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:43 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:43 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:47 PM Tuesday, July 24, 2018  :  :Agent change status to: NOT_READY, and reason code: Paper Work-------------------------------
+
+Log Entry : 5:53:47 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__PM2jC">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1118">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension>1071</extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>NOT_READY</category>
+                    <code>4</code>
+                    <forAll>true</forAll>
+                    <id>2</id>
+                    <label>Paper Work</label>
+                    <uri>/finesse/api/ReasonCode/2</uri>
+                  </reasonCode>
+                  <reasonCodeId>2</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>NOT_READY</state>
+                  <stateChangeTime>2018-07-24T15:53:46.703Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 5:53:47 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:47 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:47 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:51 PM Tuesday, July 24, 2018  :  :Agent logout requested-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__AUIhg">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1120">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension></extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>LOGOUT</category>
+                    <code>99</code>
+                    <forAll>true</forAll>
+                    <id>5</id>
+                    <label>End of shift</label>
+                    <uri>/finesse/api/ReasonCode/5</uri>
+                  </reasonCode>
+                  <reasonCodeId>5</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>LOGOUT</state>
+                  <stateChangeTime>2018-07-24T15:53:51.276Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :XMPP will disconnect now-------------------------------
+
+Log Entry : 5:53:52 PM Tuesday, July 24, 2018  :  :XMPP Closing Connection .. : Matrix.EventArgs-------------------------------
+
+Log Entry : 6:20:08 PM Tuesday, July 24, 2018  :  :Agent login requested-------------------------------
+
+Log Entry : 6:20:08 PM Tuesday, July 24, 2018  :  :Agent information is valid,-------------------------------
+
+Log Entry : 6:20:08 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object Initiation-------------------------------
+
+Log Entry : 6:20:09 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object is ready-------------------------------
+
+Log Entry : 6:20:09 PM Tuesday, July 24, 2018  :  :XMPP Connect to side : finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 6:20:09 PM Tuesday, July 24, 2018  :  :Waiting XMPP Server Response on IP : https://finesse1.dcloud.cisco.com:7443/http-bind/-------------------------------
+
+Log Entry : 6:20:12 PM Tuesday, July 24, 2018  :  :XMPP Login Completed-------------------------------
+
+Log Entry : 6:20:15 PM Tuesday, July 24, 2018  :  :JID: 1071@finesse1.dcloud.cisco.com/cisco-------------------------------
+
+Log Entry : 6:20:15 PM Tuesday, July 24, 2018  :  :Connecting Rest on side: finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 6:20:17 PM Tuesday, July 24, 2018  :  :Rest connected to side: https://finesse1.dcloud.cisco.com:8445/finesse-------------------------------
+
+Log Entry : 6:20:17 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:20:17 PM Tuesday, July 24, 2018  :  :Loading not ready reason code-------------------------------
+
+Log Entry : 6:20:17 PM Tuesday, July 24, 2018  :  :Loading logout reason code-------------------------------
+
+Log Entry : 6:20:17 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:20:17 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:20:17 PM Tuesday, July 24, 2018  :  :Loading System Information from rest API-------------------------------
+
+Log Entry : 6:20:18 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 6:20:18 PM Tuesday, July 24, 2018  :  :Loading Queue Information from rest API-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_CALLBACK</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Central</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5070543</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Gold</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9342036</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>EIM_OUTBOUND</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9323350</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_East</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/792653</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Default</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/13886819</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_DELAYED</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_West</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/11819537</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_EIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/0</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_WIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/2</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Diamond</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4589316</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Platinum</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/10273946</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_3G</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/8571066</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:20:19 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 6:20:30 PM Tuesday, July 24, 2018  :  :Agent logout requested-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 6:20:31 PM Tuesday, July 24, 2018  :  :XMPP will disconnect now-------------------------------
+
+Log Entry : 6:20:36 PM Tuesday, July 24, 2018  :  :XMPP Closing Connection .. : Matrix.EventArgs-------------------------------
+
+Log Entry : 6:20:36 PM Tuesday, July 24, 2018  :  :XMPP Error: BoshException-------------------------------
+
+Log Entry : 6:20:36 PM Tuesday, July 24, 2018  :  :XMPP Error: BoshException-------------------------------
+
+Log Entry : 6:20:36 PM Tuesday, July 24, 2018  :  :XMPP Error and Current state is :-------------------------------
+
+Log Entry : 6:20:45 PM Tuesday, July 24, 2018  :  :XMPP Error and Current state is :-------------------------------
+
+Log Entry : 6:21:08 PM Tuesday, July 24, 2018  :  :Agent login requested-------------------------------
+
+Log Entry : 6:21:08 PM Tuesday, July 24, 2018  :  :Agent information is valid,-------------------------------
+
+Log Entry : 6:21:08 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object Initiation-------------------------------
+
+Log Entry : 6:21:09 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object is ready-------------------------------
+
+Log Entry : 6:21:09 PM Tuesday, July 24, 2018  :  :XMPP Connect to side : finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 6:21:09 PM Tuesday, July 24, 2018  :  :Waiting XMPP Server Response on IP : https://finesse1.dcloud.cisco.com:7443/http-bind/-------------------------------
+
+Log Entry : 6:21:13 PM Tuesday, July 24, 2018  :  :XMPP Login Completed-------------------------------
+
+Log Entry : 6:21:15 PM Tuesday, July 24, 2018  :  :JID: 1071@finesse1.dcloud.cisco.com/cisco-------------------------------
+
+Log Entry : 6:21:15 PM Tuesday, July 24, 2018  :  :Connecting Rest on side: finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 6:21:19 PM Tuesday, July 24, 2018  :  :Rest connected to side: https://finesse1.dcloud.cisco.com:8445/finesse-------------------------------
+
+Log Entry : 6:21:19 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:21:19 PM Tuesday, July 24, 2018  :  :Loading not ready reason code-------------------------------
+
+Log Entry : 6:21:20 PM Tuesday, July 24, 2018  :  :Loading logout reason code-------------------------------
+
+Log Entry : 6:21:23 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:21:23 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:21:23 PM Tuesday, July 24, 2018  :  :Loading System Information from rest API-------------------------------
+
+Log Entry : 6:21:23 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Loading Queue Information from rest API-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_CALLBACK</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Central</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5070543</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>SUPER4G_EAST</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5602737</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Gold</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9342036</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:24 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>SUPER4G_Default</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9871054</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>EIM_OUTBOUND</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9323350</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_East</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/792653</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Default</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/13886819</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_West</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/11819537</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_DELAYED</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_EIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/0</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_WIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/2</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>PHONE_PROMO</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/8308994</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Diamond</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4589316</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>SUPER4G_CENTRAL</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/15784973</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>SUPER4G_WEST</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/16581887</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Platinum</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/10273946</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_3G</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/8571066</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5602737-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9871054-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/8308994-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/15784973-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/16581887-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 6:21:25 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:21:26 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:21:26 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:21:26 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 6:21:31 PM Tuesday, July 24, 2018  :  :Agent change status to: READY, and reason code: -------------------------------
+
+Log Entry : 6:21:39 PM Tuesday, July 24, 2018  :  :Agent change status to: READY, and reason code: -------------------------------
+
+Log Entry : 6:21:54 PM Tuesday, July 24, 2018  :  :Agent change status to: NOT_READY, and reason code: Paper Work-------------------------------
+
+Log Entry : 6:21:56 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__vP1OD">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1194">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension>1071</extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>NOT_READY</category>
+                    <code>4</code>
+                    <forAll>true</forAll>
+                    <id>2</id>
+                    <label>Paper Work</label>
+                    <uri>/finesse/api/ReasonCode/2</uri>
+                  </reasonCode>
+                  <reasonCodeId>2</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>NOT_READY</state>
+                  <stateChangeTime>2018-07-24T16:21:54.974Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 6:21:56 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:21:56 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:21:56 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:22:01 PM Tuesday, July 24, 2018  :  :Agent change status to: READY, and reason code: -------------------------------
+
+Log Entry : 6:22:01 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__dSc6F">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1196">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension>1071</extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>READY</state>
+                  <stateChangeTime>2018-07-24T16:22:00.550Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 6:22:01 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:22:01 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:22:01 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:22:05 PM Tuesday, July 24, 2018  :  :Agent change status to: NOT_READY, and reason code: Break-------------------------------
+
+Log Entry : 6:22:06 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__G9Cvm">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1198">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension>1071</extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>NOT_READY</category>
+                    <code>2</code>
+                    <forAll>true</forAll>
+                    <id>1</id>
+                    <label>Break</label>
+                    <uri>/finesse/api/ReasonCode/1</uri>
+                  </reasonCode>
+                  <reasonCodeId>1</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>NOT_READY</state>
+                  <stateChangeTime>2018-07-24T16:22:05.514Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 6:22:06 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:22:06 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:22:06 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Agent logout requested-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5602737-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9871054-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/8308994-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/15784973-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/16581887-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :XMPP will disconnect now-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__66oeF">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1200">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension></extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>LOGOUT</category>
+                    <code>99</code>
+                    <forAll>true</forAll>
+                    <id>5</id>
+                    <label>End of shift</label>
+                    <uri>/finesse/api/ReasonCode/5</uri>
+                  </reasonCode>
+                  <reasonCodeId>5</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>LOGOUT</state>
+                  <stateChangeTime>2018-07-24T16:22:10.939Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:22:11 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:22:12 PM Tuesday, July 24, 2018  :  :XMPP Closing Connection .. : Matrix.EventArgs-------------------------------
+
+Log Entry : 6:22:20 PM Tuesday, July 24, 2018  :  :Agent login requested-------------------------------
+
+Log Entry : 6:22:20 PM Tuesday, July 24, 2018  :  :Agent information is valid,-------------------------------
+
+Log Entry : 6:22:20 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object Reinitializing-------------------------------
+
+Log Entry : 6:22:20 PM Tuesday, July 24, 2018  :  :Finesse XMPP Client Object Reinitialized-------------------------------
+
+Log Entry : 6:22:20 PM Tuesday, July 24, 2018  :  :XMPP Connect to side : finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 6:22:20 PM Tuesday, July 24, 2018  :  :Waiting XMPP Server Response on IP : https://finesse1.dcloud.cisco.com:7443/http-bind/-------------------------------
+
+Log Entry : 6:22:22 PM Tuesday, July 24, 2018  :  :XMPP Login Completed-------------------------------
+
+Log Entry : 6:22:24 PM Tuesday, July 24, 2018  :  :JID: 1071@finesse1.dcloud.cisco.com/cisco-------------------------------
+
+Log Entry : 6:22:24 PM Tuesday, July 24, 2018  :  :Connecting Rest on side: finesse1.dcloud.cisco.com-------------------------------
+
+Log Entry : 6:22:24 PM Tuesday, July 24, 2018  :  :Rest connected to side: https://finesse1.dcloud.cisco.com:8445/finesse-------------------------------
+
+Log Entry : 6:22:24 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:22:24 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:22:24 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:22:24 PM Tuesday, July 24, 2018  :  :Loading System Information from rest API-------------------------------
+
+Log Entry : 6:22:24 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 6:22:25 PM Tuesday, July 24, 2018  :  :Loading Queue Information from rest API-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_CALLBACK</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Central</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5070543</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Gold</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9342036</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>EIM_OUTBOUND</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/9323350</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_East</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/792653</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_Default</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/13886819</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_DELAYED</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/5</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_Super4G_West</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/11819537</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_EIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/0</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CIM_WIM</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/2</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Diamond</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/4589316</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>RCM_Platinum</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/10273946</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Queue Message is:<Queue>
+  <name>CallGen_3G</name>
+  <statistics>
+    <agentsNotReady>-1</agentsNotReady>
+    <agentsReady>-1</agentsReady>
+    <agentsTalkingInbound>-1</agentsTalkingInbound>
+    <agentsTalkingInternal>-1</agentsTalkingInternal>
+    <agentsTalkingOutbound>-1</agentsTalkingOutbound>
+    <agentsWrapUpNotReady>-1</agentsWrapUpNotReady>
+    <agentsWrapUpReady>-1</agentsWrapUpReady>
+    <callsInQueue>-1</callsInQueue>
+    <startTimeOfLongestCallInQueue></startTimeOfLongestCallInQueue>
+  </statistics>
+  <uri>/finesse/api/Queue/8571066</uri>
+</Queue>-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Queue Data from Finesse Event or the first time of loading-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5602737-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9871054-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/8308994-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/15784973-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/16581887-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Subscribe to queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:22:28 PM Tuesday, July 24, 2018  :  :Checking server if there is a call at the begaining of connection-------------------------------
+
+Log Entry : 6:22:34 PM Tuesday, July 24, 2018  :  :Agent change status to: READY, and reason code: -------------------------------
+
+Log Entry : 6:22:35 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__KO1E5">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1210">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension>1071</extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>READY</state>
+                  <stateChangeTime>2018-07-24T16:22:34.871Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 6:22:35 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:22:35 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:22:35 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:22:43 PM Tuesday, July 24, 2018  :  :Agent change status to: NOT_READY, and reason code: Training-------------------------------
+
+Log Entry : 6:22:45 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__nmN5h">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1212">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension>1071</extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>NOT_READY</category>
+                    <code>5</code>
+                    <forAll>true</forAll>
+                    <id>3</id>
+                    <label>Training</label>
+                    <uri>/finesse/api/ReasonCode/3</uri>
+                  </reasonCode>
+                  <reasonCodeId>3</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>NOT_READY</state>
+                  <stateChangeTime>2018-07-24T16:22:43.112Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 6:22:45 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:22:45 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:22:45 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:22:51 PM Tuesday, July 24, 2018  :  :Agent logout requested-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5070543-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5602737-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9342036-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9871054-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/9323350-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/792653-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/13886819-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/11819537-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/5-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/0-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/2-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/8308994-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/4589316-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/15784973-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/16581887-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/10273946-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :Unsubscribe from queue:/finesse/api/Queue/8571066-------------------------------
+
+Log Entry : 6:22:52 PM Tuesday, July 24, 2018  :  :XMPP will disconnect now-------------------------------
+
+Log Entry : 6:22:53 PM Tuesday, July 24, 2018  :  :New Event Message Received as 
+<body xmlns="http://jabber.org/protocol/httpbind">
+  <message xmlns="jabber:client" from="pubsub.finesse1.dcloud.cisco.com" to="1071@finesse1.dcloud.cisco.com" id="/finesse/api/User/1071__1071@finesse1.dcloud.cisco.com__iJtl6">
+    <event xmlns="http://jabber.org/protocol/pubsub#event">
+      <items node="/finesse/api/User/1071">
+        <item id="0be528bc-744b-4c44-a9ed-b564c97397ba1214">
+          <notification xmlns="http://jabber.org/protocol/pubsub">
+            <Update>
+              <data>
+                <user>
+                  <dialogs>/finesse/api/User/1071/Dialogs</dialogs>
+                  <extension></extension>
+                  <firstName>Shanelle</firstName>
+                  <lastName>Macks</lastName>
+                  <loginId>1071</loginId>
+                  <loginName>smacks@dcloud.cisco.com</loginName>
+                  <mediaType>1</mediaType>
+                  <pendingState></pendingState>
+                  <reasonCode>
+                    <category>LOGOUT</category>
+                    <code>99</code>
+                    <forAll>true</forAll>
+                    <id>5</id>
+                    <label>End of shift</label>
+                    <uri>/finesse/api/ReasonCode/5</uri>
+                  </reasonCode>
+                  <reasonCodeId>5</reasonCodeId>
+                  <roles>
+                    <role>Agent</role>
+                    <role>Supervisor</role>
+                  </roles>
+                  <settings>
+                    <wrapUpOnIncoming>OPTIONAL</wrapUpOnIncoming>
+                  </settings>
+                  <state>LOGOUT</state>
+                  <stateChangeTime>2018-07-24T16:22:51.622Z</stateChangeTime>
+                  <teamId>5013</teamId>
+                  <teamName>Super4G</teamName>
+                  <teams>
+                    <Team>
+                      <id>5008</id>
+                      <name>RoadsideAssist</name>
+                      <uri>/finesse/api/Team/5008</uri>
+                    </Team>
+                    <Team>
+                      <id>5012</id>
+                      <name>Super3G</name>
+                      <uri>/finesse/api/Team/5012</uri>
+                    </Team>
+                    <Team>
+                      <id>5013</id>
+                      <name>Super4G</name>
+                      <uri>/finesse/api/Team/5013</uri>
+                    </Team>
+                    <Team>
+                      <id>5001</id>
+                      <name>CallGenTeam</name>
+                      <uri>/finesse/api/Team/5001</uri>
+                    </Team>
+                    <Team>
+                      <id>5011</id>
+                      <name>Shipping</name>
+                      <uri>/finesse/api/Team/5011</uri>
+                    </Team>
+                  </teams>
+                  <uri>/finesse/api/User/1071</uri>
+                </user>
+              </data>
+              <event>PUT</event>
+              <requestId></requestId>
+              <source>/finesse/api/User/1071</source>
+            </Update>
+          </notification>
+        </item>
+      </items>
+    </event>
+  </message>
+</body>-------------------------------
+
+Log Entry : 6:22:53 PM Tuesday, July 24, 2018  :  :Load Agent Information-------------------------------
+
+Log Entry : 6:22:53 PM Tuesday, July 24, 2018  :  :Update Voice Channel Status List-------------------------------
+
+Log Entry : 6:22:53 PM Tuesday, July 24, 2018  :  :Setting State Time from time :Tuesday, July 24, 2018-------------------------------
+
+Log Entry : 6:22:56 PM Tuesday, July 24, 2018  :  :XMPP Closing Connection .. : Matrix.EventArgs-------------------------------

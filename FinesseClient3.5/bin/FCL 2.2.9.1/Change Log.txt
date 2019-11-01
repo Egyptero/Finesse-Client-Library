@@ -1,0 +1,34 @@
+ * FinAgent Main File
+ * File is designed to be the finesse agent client interface. It is the main class of the SDK. 
+ * Fin Agent is representing the Model
+ * User Client should bind to the SDK through the FinAgent Object. Also the object should be created one
+ * Version 2.284
+ *  Change the logout mechansim for finesse 11.6
+ *  Add reserved object for user own model on the AgentInformation , Dialog  and FinAgent
+ * Version 2.285
+ *  Fix a bug is set Selected Voice Status
+ *  Fix a bug is updating voice status list
+ * Version 2.286
+ *  Add Execption handling with log messages in the FinAgent Methods.
+ *  Update the XMPP Client and add exception handling in all methods
+ *  Update the XMPP Client in case of error at XMPP to avoid disconnecting the system
+ * Version 2.287
+ *  Change the observable collection to be MT where we can change the list in real time from different thread without dispatcher
+ * Version 2.288
+ *  Add condition at the Unsubcribe Queue Events to ensure that XMPPClient Stream is still active
+ *  Reinitiate the dialogs and queues at the load time. Make Load Call Information Private method
+ *  Add version setting in FinAgent. Defaullt is UCCE_11.5
+ *  Add Keep Live Interval Parameter for the Agent Information
+ * Version 2.289
+ *  Changes the login to rest mechanism (Move it in timer method at the bind of XMPP with 3 seconds delay)
+ *  Ensure the receive of the XMPP first message
+ *  Add API Error Handling at login time for all login failures
+ *  Add Error Handling for system failure
+ *  Change the state timer mechansim to initiate at the SignIn time
+ *  Implement Fire Login Event Validation via timer with 3 seconds at the sucess of rest connection
+ *  Total login time will be 7 to 10 seconds at minimum
+ * Version 2.290
+ *  Change the Update Voice Status to add work ready spelling correction in the status label and pending status
+ *  Set the iconname for the work_ready , work_not_ready status.
+ * Version 2.291
+ *  Change the finesse rest client to format the outcome message before replying back to the requester. Becuase sometime the parse fail

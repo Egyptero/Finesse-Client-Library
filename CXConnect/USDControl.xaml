@@ -1,0 +1,1396 @@
+﻿<USD:DynamicsBaseHostedControl x:Class="CXConnect.USDControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:USD="clr-namespace:Microsoft.Crm.UnifiedServiceDesk.Dynamics;assembly=Microsoft.Crm.UnifiedServiceDesk.Dynamics"
+             xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  
+             xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+             xmlns:local="clr-namespace:CXConnect"
+             mc:Ignorable="d"
+             Unloaded="DynamicsBaseHostedControl_Unloaded" MaxHeight="600" MaxWidth="330">
+    
+    <USD:DynamicsBaseHostedControl.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Grey.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ComboBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Slider.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PasswordBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Expander.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Menu.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DataGrid.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Chip.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToolBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <local:VariableLocator x:Key="VariableLocator"/>
+            <local:DialogExtensionLocator x:Key="DialogExtensionLocator"/>
+            <local:RecentLocator x:Key="RecentLocator"/>
+            <materialDesignConverters:BooleanToVisibilityConverter x:Key="InvertedBooleanToVisibilityConverter" TrueValue="Collapsed" FalseValue="Visible" />
+        </ResourceDictionary>
+    </USD:DynamicsBaseHostedControl.Resources>
+    <Grid Margin="0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Background="{StaticResource PrimaryHueDarkBrush}" Margin="0,0">
+            <!-- MouseDown="DockPanel_MouseDown"-->
+            <Grid DockPanel.Dock="Left" HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <materialDesign:PackIcon Kind="HeadphonesSettings" Foreground="{Binding AgentInformation.SelectedVoiceStatus,Converter={StaticResource VariableLocator},ConverterParameter=IconColor}"  Margin="7,0"/>
+                    <TextBlock Text="{Binding AgentInformation.Name}" Foreground="{StaticResource PrimaryHueLightBrush}"  Margin="3,0"/>
+                    <TextBlock Text="(" Foreground="{StaticResource PrimaryHueLightBrush}"  Margin="0,0"/>
+                    <TextBlock Text="{Binding AgentInformation.Extension}" Foreground="{StaticResource PrimaryHueLightBrush}"  Margin="1,0"/>
+                    <TextBlock Text=")" Foreground="{StaticResource PrimaryHueLightBrush}"  Margin="0,0"/>
+                </StackPanel>
+            </Grid>
+            <!--<Grid DockPanel.Dock="Right" HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button x:Name="MinimizeButton" Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Background="Transparent" BorderBrush="Transparent" KeyboardNavigation.IsTabStop="False" Click="MinimizeButton_Click" Margin="7,0" Padding="5,5">
+                        <materialDesign:PackIcon Kind="WindowMinimize" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Button>
+                    <Button x:Name="MaximizeButton" Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Background="Transparent" BorderBrush="Transparent" KeyboardNavigation.IsTabStop="False" Click="MaximizeButton_Click" Margin="7,0" Padding="5,5">
+                        <materialDesign:PackIcon Kind="WindowMaximize" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Button>
+                    <Button x:Name="CloseButton" Style="{StaticResource MaterialDesignRaisedDarkButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Background="Transparent" BorderBrush="Transparent" KeyboardNavigation.IsTabStop="False" Click="Window_Closing" Margin="7,0" Padding="5,5">
+                        <materialDesign:PackIcon Kind="WindowClose" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Button>
+
+                </StackPanel>
+            </Grid>-->
+        </DockPanel>
+        <Grid Name="MainPage" Grid.Row="1" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid Name="MainScreen" Grid.Row="0">
+                <Grid Name="DialPadScreen" Margin="45,20,45,10" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="NumberToDial" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,15,0,20" HorizontalContentAlignment="Center" Text="{Binding Path=AgentInformation.ReservedObject.DialNumber}" FontSize="24" BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                        <TextBox.Resources>
+                            <Style TargetType="TextBox">
+                                <Style.Triggers>
+                                    <Trigger Property="IsFocused" Value="true">
+                                        <Setter Property = "BorderBrush" Value="Transparent"/>
+                                        <Setter Property = "BorderThickness" Value="0"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <Button Name="one" Width="60" Height="60" Grid.Row="1" Grid.Column="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="1" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text=" " FontSize="9"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="two" Width="60" Height="60" Grid.Row="1" Grid.Column="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28"  Text="2" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Padding="0,0" Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="ABC" FontSize="9"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="three" Width="60" Height="60" Grid.Row="1" Grid.Column="2" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="3" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="DEF" FontSize="9"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="four" Width="60" Height="60" Grid.Row="2" Grid.Column="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="4" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="GHI" FontSize="9"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="five" Width="60" Height="60" Grid.Row="2" Grid.Column="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="5" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="JKL" FontSize="9"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="six" Width="60" Height="60" Grid.Row="2" Grid.Column="2" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="6" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="MNO" FontSize="9"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="seven" Width="60" Height="60" Grid.Row="3" Grid.Column="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="7" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="PQRS" FontSize="9"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="eight" Width="60" Height="60" Grid.Row="3" Grid.Column="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="8" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="TUV" FontSize="9"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="nine" Width="60" Height="60" Grid.Row="3" Grid.Column="2" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="9" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="WXYZ" FontSize="9"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="star" Width="60" Height="60" Grid.Row="4" Grid.Column="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="34" Text="*" HorizontalAlignment="Center"/>
+                    </Button>
+                    <Button Name="zero" Width="60" Height="60" Grid.Row="4" Grid.Column="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="0" HorizontalAlignment="Center"/>
+                            <WrapPanel Margin="0,0" HorizontalAlignment="Center">
+                                <TextBlock Margin="0,0" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="+"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="hash" Width="60" Height="60" Grid.Row="4" Grid.Column="2" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="MakeDialPadButtonClick">
+                        <TextBlock Padding="0,0" Margin="0,0,0,0" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="34" Text="#" HorizontalAlignment="Center"/>
+                    </Button>
+                    <Button Name="call" Width="60" Height="60" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Margin="7,15" Click="MakeDialPadButtonClick" Background="#49d862" BorderBrush="#49d862">
+                        <materialDesign:PackIcon Kind="Phone" Foreground="White" Width="36" Height="36"/>
+                    </Button>
+                </Grid>
+                <Grid Name="PhoneScreen" Background="{StaticResource MaterialDesignDarkBackground}" Visibility="Hidden">
+                    <!-- Background="{DynamicResource PrimaryHueDarkBrush}" -->
+                    <materialDesign:Transitioner SelectedIndex="{Binding Path=AgentInformation.SelectedDialog.ReservedObject,Converter={StaticResource DialogExtensionLocator},ConverterParameter=CallWaiting}" Visibility="{Binding AgentInformation.Dialogs,Converter={StaticResource DialogExtensionLocator},ConverterParameter=ShowCallsPanel,UpdateSourceTrigger=PropertyChanged}">
+                        <materialDesign:TransitionerSlide OpeningEffect="{materialDesign:TransitionEffect Kind=ExpandIn}">
+                            <materialDesign:Transitioner Name="CallActionsForm" SelectedIndex="0">
+                                <materialDesign:TransitionerSlide>
+                                    <Grid Name="CallActionsMainForm">
+                                        <Grid Name="CallActionDetails" Margin="50,10,50,10" Visibility="{Binding Path=AgentInformation.SelectedDialog.Release,Converter={StaticResource BooleanToVisibilityConverter}}">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="1*"/>
+                                                <ColumnDefinition Width="1*"/>
+                                                <ColumnDefinition Width="1*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <ListBox Name="ListCalls" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"  ItemsSource="{Binding Path=AgentInformation.Dialogs}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Padding="0,0" SelectedValue="{Binding Path=AgentInformation.SelectedDialog,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="Calls_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="100" Height="100" Margin="-30,5,-30,0" BorderBrush="White">
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Grid Name="CallHeader" HorizontalAlignment="Stretch">
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="*"/>
+                                                                <ColumnDefinition Width="auto"/>
+                                                            </Grid.ColumnDefinitions>
+                                                            <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Margin="2,2" Grid.Column="1" Style="{StaticResource MaterialDesignSubheadingTextBlock}" Text="{Binding Path=DialogStateTimer.TimerLabel,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right"/>
+                                                            <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Margin="2,2" Grid.Column="0" Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding Path=Header,UpdateSourceTrigger=PropertyChanged}"/>
+                                                            <Line Stroke="Transparent" Stretch="Fill" X2="1"/>
+                                                        </Grid>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="5,5">
+                                                <Button Background="Transparent" Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="Hold" ToolTip="Hold Call" IsEnabled="{Binding AgentInformation.SelectedDialog.Hold}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="Pause" Width="24" Height="24" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                                <WrapPanel HorizontalAlignment="Center">
+                                                    <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Hold"/>
+                                                </WrapPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Margin="5,5" >
+                                                <Button  Background="Transparent" Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="Keypad" ToolTip="Send DTMF" IsEnabled="{Binding AgentInformation.SelectedDialog.SendDTMF}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="Dialpad" Width="24" Height="24" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                                <WrapPanel HorizontalAlignment="Center">
+                                                    <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Keypad"/>
+                                                </WrapPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" Margin="5,5" >
+                                                <Button  Background="Transparent" Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="Resume" ToolTip="Return Call" IsEnabled="{Binding AgentInformation.SelectedDialog.Resume}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="PlayPause" Width="24" Height="24" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                                <WrapPanel HorizontalAlignment="Center">
+                                                    <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Return"/>
+                                                </WrapPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" Margin="5,5">
+                                                <Button Background="Transparent" Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="Consult" ToolTip="Consult Call" IsEnabled="{Binding AgentInformation.SelectedDialog.Consult}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="Plus" Width="24" Height="24" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                                <WrapPanel HorizontalAlignment="Center">
+                                                    <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Add call"/>
+                                                </WrapPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Margin="5,5">
+                                                <Button Background="Transparent" Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="Conference" ToolTip="Merge Call" IsEnabled="{Binding AgentInformation.SelectedDialog.Conference}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="CallMerge" Width="24" Height="24" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                                <WrapPanel HorizontalAlignment="Center">
+                                                    <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Merge"/>
+                                                </WrapPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" Margin="5,5">
+                                                <Button Background="Transparent" Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="CTransfer" ToolTip="Consult Forward Call" IsEnabled="{Binding AgentInformation.SelectedDialog.CTransfer}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="FastForward" Width="24" Height="24" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                                <WrapPanel HorizontalAlignment="Center">
+                                                    <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Forward"/>
+                                                </WrapPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" Margin="5,5">
+                                                <Button Background="Transparent" Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="Transfer" ToolTip="Direct Forward Call" IsEnabled="{Binding AgentInformation.SelectedDialog.Transfer}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="Forward" Width="24" Height="24" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                                <WrapPanel HorizontalAlignment="Center">
+                                                    <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Transfer"/>
+                                                </WrapPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="5,5">
+                                                <Button Background="Transparent" Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="SurveyTransfer" ToolTip="Survey Transfer" IsEnabled="{Binding AgentInformation.SelectedDialog.Transfer}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="EmoticonHappy" Width="24" Height="24" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                                <WrapPanel HorizontalAlignment="Center">
+                                                    <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Survey"/>
+                                                </WrapPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" Margin="5,5">
+                                                <Button Background="Transparent" Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="IVRTransfer" ToolTip="IVR Transfer" IsEnabled="{Binding Path=AgentInformation.SelectedDialog,Converter={StaticResource DialogExtensionLocator},ConverterParameter=SendToIVRButton}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="FileTree" Width="24" Height="24" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                                <WrapPanel HorizontalAlignment="Center">
+                                                    <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="IVR"/>
+                                                </WrapPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5,5,0">
+                                                <Button  Style="{StaticResource MaterialDesignFloatingActionLightButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Background="Red" BorderBrush="Red" Foreground="White" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="Release" ToolTip="Release Call" IsEnabled="{Binding AgentInformation.SelectedDialog.Release}" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="PhoneHangup" Width="24" Height="24" HorizontalAlignment="Center"/>
+                                                </Button>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
+                                                <Button Background="Transparent" Tag="{Binding AgentInformation.SelectedDialog.ID}" Name="CallData" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" HorizontalAlignment="Right" Click="CallButton_Click">
+                                                    <materialDesign:PackIcon Kind="Attachment" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </Grid>
+                                        <Grid Name="CallActionAnswer" Margin="50,10,50,30" Visibility="{Binding Path=AgentInformation.SelectedDialog.Answer,Converter={StaticResource BooleanToVisibilityConverter}}">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Grid.Row="0" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Foreground="{StaticResource PrimaryHueLightBrush}" Text="{Binding Path=AgentInformation.SelectedDialog.Header}" HorizontalAlignment="Center" Margin="-40,70,-40,10" VerticalAlignment="Center"/>
+                                            <TextBlock Grid.Row="1" Style="{StaticResource MaterialDesignTitleTextBlock}" Foreground="{StaticResource PrimaryHueLightBrush}" Text="{Binding Path=AgentInformation.SelectedDialog.State}" HorizontalAlignment="Center"/>
+                                            <materialDesign:PackIcon Kind="Account" Grid.Row="2" Width="200" Height="200" Foreground="{StaticResource PrimaryHueLightBrush}" HorizontalAlignment="Center" Margin="0,40" VerticalAlignment="Center"/>
+                                            <Button Grid.Row="3" Width="60" Height="60" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Foreground="White" Tag="{Binding Path=AgentInformation.SelectedDialog.ID}" Name="Answer" ToolTip="Answer Call" IsEnabled="{Binding AgentInformation.SelectedDialog.Answer}" Click="CallButton_Click" Background="#49d862" BorderBrush="#49d862">
+                                                <materialDesign:PackIcon Kind="Phone" Width="36" Height="36" HorizontalAlignment="Center"/>
+                                            </Button>
+                                        </Grid>
+                                    </Grid>
+                                </materialDesign:TransitionerSlide>
+                                <materialDesign:TransitionerSlide>
+                                    <Grid Name="CallDialPadForm" Background="{DynamicResource MaterialDesignDarkBackground}">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Grid.Row="0" Name="CallActionDialPadTitle" Style="{StaticResource MaterialDesignBody2TextBlock}" Foreground="{StaticResource PrimaryHueLightBrush}" Margin="20,10" HorizontalAlignment="Center"/>
+                                        <Grid Grid.Row="1" Margin="45,10,45,10">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="1*"/>
+                                                <ColumnDefinition Width="1*"/>
+                                                <ColumnDefinition Width="1*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBox Name="CallActionNumberToDial" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Foreground="{StaticResource PrimaryHueLightBrush}" Margin="10,5,10,10" materialDesign:HintAssist.Hint="" HorizontalContentAlignment="Center" Text="{Binding Path=AgentInformation.ReservedObject.DialNumber}" FontSize="24" BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                                                <TextBox.Resources>
+                                                    <Style TargetType="TextBox">
+                                                        <Style.Triggers>
+                                                            <Trigger Property="IsFocused" Value="true">
+                                                                <Setter Property = "BorderBrush" Value="Transparent"/>
+                                                                <Setter Property = "BorderThickness" Value="0"/>
+                                                                <Setter Property="Background" Value="Transparent"/>
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBox.Resources>
+                                            </TextBox>
+                                            <Button Name="CallActionOne" Background="Transparent" Width="60" Height="60" Grid.Row="1" Grid.Column="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="1" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text=" " Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionTwo" Background="Transparent" Width="60" Height="60" Grid.Row="1" Grid.Column="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="2" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="ABC" FontSize="9" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionThree" Background="Transparent" Width="60" Height="60" Grid.Row="1" Grid.Column="2" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="3" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="DEF" FontSize="9" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionFour" Background="Transparent" Width="60" Height="60" Grid.Row="2" Grid.Column="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="4" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="GHI" FontSize="9" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionFive" Background="Transparent" Width="60" Height="60" Grid.Row="2" Grid.Column="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="5" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="JKL" FontSize="9" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionSix" Background="Transparent" Width="60" Height="60" Grid.Row="2" Grid.Column="2" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="6" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="MNO" FontSize="9" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionSeven" Background="Transparent" Width="60" Height="60" Grid.Row="3" Grid.Column="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="7" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="PQRS" FontSize="9" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionEight" Background="Transparent" Width="60" Height="60" Grid.Row="3" Grid.Column="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="8" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="TUV" FontSize="9" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionNine" Background="Transparent" Width="60" Height="60" Grid.Row="3" Grid.Column="2" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="9" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="WXYZ" FontSize="9" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionStar" Background="Transparent" Width="60" Height="60" Grid.Row="4" Grid.Column="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="34" Text="*" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                            </Button>
+                                            <Button Name="CallActionZero" Background="Transparent" Width="60" Height="60" Grid.Row="4" Grid.Column="1" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <StackPanel HorizontalAlignment="Center">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="28" Text="0" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    <WrapPanel HorizontalAlignment="Center">
+                                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="+" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Button>
+                                            <Button Name="CallActionHash" Background="Transparent" Width="60" Height="60" Grid.Row="4" Grid.Column="2" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="7,7" Click="DialPadButtonClick">
+                                                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" FontSize="34" Text="#" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                            </Button>
+                                            <Button Name="CallActionCall" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Margin="7,15" Click="DialPadButtonClick" Background="#49d862" BorderBrush="#49d862" Visibility="{Binding Tag,ElementName=CallDialPadForm,Converter={StaticResource VariableLocator},ConverterParameter=CallDialPadForm,UpdateSourceTrigger=PropertyChanged}">
+                                                <materialDesign:PackIcon Kind="Phone" Foreground="White" Width="36" Height="36"/>
+                                            </Button>
+                                            <Button Name="CallActionHide" Grid.Row="5" Grid.Column="2" Content="Hide" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFlatButton}" Click="DialPadButtonClick"/>
+                                        </Grid>
+                                    </Grid>
+                                </materialDesign:TransitionerSlide>
+                                <materialDesign:TransitionerSlide>
+                                    <Grid Name="CallTransferIVRForm" Background="{DynamicResource MaterialDesignDarkBackground}">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Grid.Row="0" Text="Send back to IVR" Style="{StaticResource MaterialDesignBody2TextBlock}" Foreground="{StaticResource PrimaryHueLightBrush}" Margin="20,10" HorizontalAlignment="Center"/>
+                                        <Border Grid.Row="1"  BorderBrush="{StaticResource MaterialDesignDarkBackground}" BorderThickness="1" Margin="30,30,30,10" Padding="10,10">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="auto"/>
+                                                    <RowDefinition Height="auto"/>
+                                                    <RowDefinition Height="*"/>
+
+                                                </Grid.RowDefinitions>
+                                                <CheckBox Margin="10,30" Grid.Row="0" Style="{StaticResource MaterialDesignCheckBox}" Content="Male" Foreground="{StaticResource PrimaryHueLightBrush}" IsChecked="{Binding Path=ReservedObject.IsMaleOnly}" HorizontalAlignment="Left"/>
+                                                <Grid Margin="10,5" Grid.Row="1">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="1*"/>
+                                                        <ColumnDefinition Width="1*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <RadioButton Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignLightRadioButton}" Foreground="{StaticResource PrimaryHueLightBrush}" Content="Inquiry" IsChecked="{Binding Path=ReservedObject.IsInquiry}" Margin="2,0"/>
+                                                    <RadioButton Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignLightRadioButton}" Foreground="{StaticResource PrimaryHueLightBrush}" Content="Complaint" IsChecked="{Binding Path=ReservedObject.IsComplaint}" Margin="2,0"/>
+                                                </Grid>
+                                                <ComboBox Margin="10,20" Grid.Row="2" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Foreground="{StaticResource PrimaryHueLightBrush}" BorderBrush="{StaticResource PrimaryHueLightBrush}" VerticalAlignment="Center" ItemsSource="{Binding Path=ReservedObject.TransferIVRMenu}" SelectedValue="{Binding Path=ReservedObject.SelectedIVROption,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                            </Grid>
+                                        </Border>
+                                        <Grid Grid.Row="2" Margin="50,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="1*"/>
+                                                <ColumnDefinition Width="1*"/>
+                                                <ColumnDefinition Width="1*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Button Name="IVRRoute" Tag="{Binding ID}"  Grid.Column="0" Grid.ColumnSpan="3" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Margin="5,10" Click="UpdateRoutingDataButtonClick">
+                                                <materialDesign:PackIcon Kind="Phone" Foreground="White" Width="36" Height="36"/>
+                                            </Button>
+                                            <Button Name="IVRHide" Grid.Column="2" Content="Hide" Style="{StaticResource MaterialDesignFlatButton}" Click="UpdateRoutingDataButtonClick"/>
+                                        </Grid>
+
+
+                                    </Grid>
+                                </materialDesign:TransitionerSlide>
+                                <materialDesign:TransitionerSlide>
+                                    <Grid Name="CallAttachedDataForm" Background="{DynamicResource MaterialDesignDarkBackground}">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Grid.Row="0" Text="Call Data" Style="{StaticResource MaterialDesignBody2TextBlock}" Foreground="{StaticResource PrimaryHueLightBrush}" Margin="20,10" HorizontalAlignment="Center"/>
+                                        <Grid Grid.Row="1" Margin="30,30,30,30">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <materialDesign:Chip Grid.Row="0" Margin="5,3" Content="{Binding Converter={StaticResource VariableLocator},ConverterParameter=callVariable5}" ToolTip="Skill Label" HorizontalAlignment="Stretch" Foreground="{StaticResource PrimaryHueLightBrush}" Background="{StaticResource PrimaryHueDarkBrush}">
+                                                <materialDesign:Chip.Icon>
+                                                    <materialDesign:PackIcon Kind="Group"/>
+                                                </materialDesign:Chip.Icon>
+                                            </materialDesign:Chip>
+                                            <materialDesign:Chip Grid.Row="1" Margin="5,3" Content="{Binding Converter={StaticResource VariableLocator},ConverterParameter=callVariable1}" ToolTip="POS" HorizontalAlignment="Stretch" Foreground="{StaticResource PrimaryHueLightBrush}" Background="{StaticResource PrimaryHueDarkBrush}">
+                                                <materialDesign:Chip.Icon>
+                                                    <materialDesign:PackIcon Kind="Pen"/>
+                                                </materialDesign:Chip.Icon>
+                                            </materialDesign:Chip>
+                                            <materialDesign:Chip Grid.Row="2" Margin="5,3" Content="{Binding Converter={StaticResource VariableLocator},ConverterParameter=callVariable2}" ToolTip="Language" HorizontalAlignment="Stretch" Foreground="{StaticResource PrimaryHueLightBrush}" Background="{StaticResource PrimaryHueDarkBrush}">
+                                                <materialDesign:Chip.Icon>
+                                                    <materialDesign:PackIcon Kind="FormatText"/>
+                                                </materialDesign:Chip.Icon>
+                                            </materialDesign:Chip>
+                                            <materialDesign:Chip Grid.Row="3" Margin="5,3" Content="{Binding Converter={StaticResource VariableLocator},ConverterParameter=callVariable4}" ToolTip="CIC" HorizontalAlignment="Stretch" Foreground="{StaticResource PrimaryHueLightBrush}" Background="{StaticResource PrimaryHueDarkBrush}">
+                                                <materialDesign:Chip.Icon>
+                                                    <materialDesign:PackIcon Kind="AccountKey"/>
+                                                </materialDesign:Chip.Icon>
+                                            </materialDesign:Chip>
+                                            <materialDesign:Chip Grid.Row="4" Margin="5,3" Content="{Binding Converter={StaticResource VariableLocator},ConverterParameter=callVariable3}" ToolTip="IVR Label" HorizontalAlignment="Stretch" Foreground="{StaticResource PrimaryHueLightBrush}" Background="{StaticResource PrimaryHueDarkBrush}">
+                                                <materialDesign:Chip.Icon>
+                                                    <materialDesign:PackIcon Kind="Application"/>
+                                                </materialDesign:Chip.Icon>
+                                            </materialDesign:Chip>
+                                            <materialDesign:Chip Grid.Row="5" Margin="5,3" Content="{Binding Converter={StaticResource VariableLocator},ConverterParameter=callVariable7}" ToolTip="Dialed Number" HorizontalAlignment="Stretch" Foreground="{StaticResource PrimaryHueLightBrush}" Background="{StaticResource PrimaryHueDarkBrush}">
+                                                <materialDesign:Chip.Icon>
+                                                    <materialDesign:PackIcon Kind="PhoneInTalk"/>
+                                                </materialDesign:Chip.Icon>
+                                            </materialDesign:Chip>
+                                            <Button Name="CallDataHide" Grid.Row="6" Content="Hide" Style="{StaticResource MaterialDesignFlatButton}" Click="CallDataHide_Click" HorizontalAlignment="Right"/>
+                                        </Grid>
+                                    </Grid>
+                                </materialDesign:TransitionerSlide>
+                            </materialDesign:Transitioner>
+                        </materialDesign:TransitionerSlide>
+                        <materialDesign:TransitionerSlide OpeningEffect="{materialDesign:TransitionEffect Kind=None}">
+                            <Grid Name="CallWaiting">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <ListBox Name="ListCallsInWaiting" Grid.Row="0" ItemsSource="{Binding Path=AgentInformation.Dialogs}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Padding="0,0" SelectedValue="{Binding Path=AgentInformation.SelectedDialog,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="Calls_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="100" Height="100" Margin="20,20,20,10">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Name="CallHeader" HorizontalAlignment="Stretch">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Margin="2,2" Grid.Column="1" Style="{StaticResource MaterialDesignSubheadingTextBlock}" Text="{Binding Path=DialogStateTimer.TimerLabel}" HorizontalAlignment="Right"/>
+                                                <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Margin="2,2" Grid.Column="0" Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding Path=Header}"/>
+                                                <!-- -->
+                                                <Line Stroke="Transparent" Stretch="Fill" X2="1"/>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+
+                                <StackPanel HorizontalAlignment="Center" Grid.Row="1">
+                                    <Image HorizontalAlignment="Center" gif:AnimationBehavior.SourceUri="Images/Loading1.gif" Margin="0,5" MaxWidth="150" OpacityMask="Black" Opacity="0.5"/>
+                                    <TextBlock HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignTitleTextBlock}"  Text="{Binding Path=AgentInformation.SelectedDialog.ReservedObject,Converter={StaticResource DialogExtensionLocator},ConverterParameter=WaitingMessage}" Margin="10,15"/>
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:TransitionerSlide>
+                    </materialDesign:Transitioner>
+                </Grid>
+                <Grid Name="QueuesScreen" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border  Grid.Row="0" BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" Background="{DynamicResource PrimaryHueDarkBrush}" >
+                        <Grid Margin="5,5">
+                            <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}" Text="Queues insights" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+                        </Grid>
+                    </Border>
+                    <ListBox Grid.Row="1" Margin="10,10,10,5" ItemsSource="{Binding Path=AgentInformation.Queues}" Padding="0,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <materialDesign:Card Margin="1,1" BorderBrush="WhiteSmoke" BorderThickness="1" Background="White">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Grid.Row="0" Background="{DynamicResource PrimaryHueMidBrush}">
+                                            <TextBlock Foreground="{DynamicResource PrimaryHueLightBrush}" Style="{StaticResource MaterialDesignBody2TextBlock}" Text="{Binding Name}" Margin="5,2"/>
+                                            <Line Stroke="{DynamicResource PrimaryHueLightBrush}" Stretch="Fill" X2="1"/>
+                                        </StackPanel>
+                                        <Grid Grid.Row="1" Margin="5,5">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Margin="2,2">
+                                                <Button HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFlatButton}">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding CallsInQueue}"/>
+                                                </Button>
+                                                <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Q Calls"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="2,2">
+                                                <Button HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFlatButton}">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding AgentsReady}"/>
+                                                </Button>
+                                                <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Ready"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" Margin="2,2">
+                                                <Button HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFlatButton}">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding AgentsNotReady}"/>
+                                                </Button>
+                                                <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Not ready"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="2,2">
+                                                <Button HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFlatButton}">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding AgentsTalkingInbound}"/>
+                                                </Button>
+                                                <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Talking In"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="2,2">
+                                                <Button HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFlatButton}">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding AgentsTalkingOutbound}"/>
+                                                </Button>
+                                                <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Talking Out"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Margin="2,2">
+                                                <Button HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFlatButton}">
+                                                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding AgentsTalkingInternal}"/>
+                                                </Button>
+                                                <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Talking Ext"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Grid>
+                                </materialDesign:Card>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+                <Grid Name="AboutScreen" Visibility="Hidden">
+                    <materialDesign:Card Margin="20,40" BorderBrush="WhiteSmoke" BorderThickness="1" Background="White">
+                        <StackPanel HorizontalAlignment="Center" Margin="5,40">
+                            <TextBlock Margin="0,20,0,0" Style="{StaticResource MaterialDesignTitleTextBlock}" Text="FinesseX USD Connector" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="Version 2.003" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="Compatible with Finesse 11.6" HorizontalAlignment="Center"/>
+                            <TextBlock Margin="0,20" Style="{StaticResource MaterialDesignBody2TextBlock}" Text="ISTNetworks - CXiC" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Text="Author" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="Mamdouh Aref" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Text="Designer" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="Mamdouh Aref" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="Naela Sakr" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="Rasha Deghedi" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Text="Developer" HorizontalAlignment="Center"/>
+                            <TextBlock Style="{StaticResource MaterialDesignBody1TextBlock}" Text="Mamdouh Aref" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </Grid>
+                <Grid Name="HomeScreen" Visibility="Visible">
+                    <!--<Grid.Background>
+                        <ImageBrush ImageSource="Images/Desktop/MobDesk1.jpg" Stretch="UniformToFill" Opacity="0.5"/>
+                    </Grid.Background>-->
+                    <materialDesign:Transitioner Name="HomeScreenTransitioner" SelectedIndex="0">
+                        <materialDesign:TransitionerSlide>
+                            <Grid Name="HomePageScreen">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <materialDesign:Card Grid.Row="0" Margin="15,40,15,10" MinHeight="180" Background="{StaticResource PrimaryHueLightBrush}">
+                                    <!--<materialDesign:Card.Background>
+                                        <ImageBrush ImageSource="Images/Desktop/Card4.jpg" Stretch="UniformToFill" Opacity="1"/>
+                                    </materialDesign:Card.Background>-->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Grid.Row="0" HorizontalAlignment="Left" Margin="5,10,0,0">
+                                            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="{Binding AgentInformation.Name}" HorizontalAlignment="Left" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                            <WrapPanel Margin="10,10,10,5">
+                                                <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                                <TextBlock Style="{DynamicResource MaterialDesignBody2TextBlock}" Text="{Binding AgentInformation.Extension}" HorizontalAlignment="Left" Foreground="{DynamicResource PrimaryHueDarkBrush}" Margin="2,0"/>
+                                            </WrapPanel>
+                                            <WrapPanel Margin="10,0,10,5">
+                                                <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                                <TextBlock Style="{DynamicResource MaterialDesignBody2TextBlock}" Text="{Binding AgentInformation.AgentID}" HorizontalAlignment="Left" Foreground="{DynamicResource PrimaryHueDarkBrush}" Margin="2,0"/>
+                                            </WrapPanel>
+                                            <WrapPanel Margin="10,0,10,5">
+                                                <materialDesign:PackIcon Kind="AccountMultiple" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                                <TextBlock Style="{DynamicResource MaterialDesignBody2TextBlock}" Text="{Binding AgentInformation.TeamName}" HorizontalAlignment="Left" Foreground="{DynamicResource PrimaryHueDarkBrush}" Margin="2,0"/>
+                                            </WrapPanel>
+                                        </StackPanel>
+                                        <TextBlock Margin="5,5" Style="{StaticResource MaterialDesignDisplay2TextBlock}" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=StateTimer.TimerLabel,UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource PrimaryHueDarkBrush}"/>
+                                    </Grid>
+                                </materialDesign:Card>
+                                <ComboBox Grid.Row="1" Name="StatusComboBox" Margin="15,0,15,10" ItemsSource="{Binding Path=AgentInformation.VoiceStatusList}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedValue="{Binding Path=AgentInformation.SelectedVoiceStatus,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectionChanged="VoiceStatus_SelectionChanged" Visibility="{Binding Path=AgentInformation.ReservedObject.AgentStatusEnabled,Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <WrapPanel>
+                                                <Image Source="{Binding StatusImage}" Width="28"/>
+                                                <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}" Text="{Binding StatusLabel}"/>
+                                            </WrapPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <Grid Grid.Row="1" Visibility="{Binding Path=AgentInformation.ReservedObject.AgentStatusDisabled,Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image gif:AnimationBehavior.SourceUri="Images/Loader.gif" Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Changing status" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </WrapPanel>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="0" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Click="Queues_Click" Background="#4b5258" BorderBrush="#4b5258" Foreground="White" Padding="0,0">
+                                            <materialDesign:PackIcon Kind="Download" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                        </Button>
+                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Queue" HorizontalAlignment="Center" Foreground="Black"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="0" Grid.Column="1" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Background="#ffc60b" BorderBrush="#ffc60b" Foreground="White" Padding="0,0">
+                                            <materialDesign:PackIcon Kind="Cloud" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                        </Button>
+                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Context" HorizontalAlignment="Center" Foreground="Black"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="0" Grid.Column="2" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Background="#ed008c" BorderBrush="#ed008c" Foreground="White" Padding="0,0">
+                                            <materialDesign:PackIcon Kind="ChartBar" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                        </Button>
+                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Statistics" HorizontalAlignment="Center" Foreground="Black"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="0" Grid.Column="3" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Background="#25D366" BorderBrush="#25D366" Foreground="White" Padding="0,0">
+                                            <materialDesign:PackIcon Kind="Whatsapp" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                        </Button>
+                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="WhatsApp" HorizontalAlignment="Center" Foreground="Black"/>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Row="1" Grid.Column="0" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Background="#7F8C8D" BorderBrush="#7F8C8D" Foreground="White" Padding="0,0">
+                                            <materialDesign:PackIcon Kind="Settings" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                        </Button>
+                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Setting" HorizontalAlignment="Center" Foreground="Black"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Background="White" BorderBrush="White" Foreground="Red" Padding="0,0">
+                                            <materialDesign:PackIcon Kind="EmailOutline" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                        </Button>
+                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Email" HorizontalAlignment="Center" Foreground="Black"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="2" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Background="#3b5999" BorderBrush="#3b5999" Foreground="White" Padding="0,0">
+                                            <materialDesign:PackIcon Kind="TwitterRetweet" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                        </Button>
+                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Social" HorizontalAlignment="Center" Foreground="Black"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="3" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Background="#0084ff" BorderBrush="#0084ff" Foreground="White" Padding="0,0">
+                                            <materialDesign:PackIcon Kind="Wechat" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                        </Button>
+                                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Chat" HorizontalAlignment="Center" Foreground="Black"/>
+                                    </StackPanel>
+
+                                </Grid>
+                            </Grid>
+                        </materialDesign:TransitionerSlide>
+                        <materialDesign:TransitionerSlide>
+                            <Grid Name="AppsPageScreen">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Grid.Row="0" Grid.Column="0" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Click="Recents_Click" Background="#1B4F72" BorderBrush="#1B4F72" Foreground="White" Padding="0,0">
+                                        <materialDesign:PackIcon Kind="Clock" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                    </Button>
+                                    <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Recent" HorizontalAlignment="Center" Foreground="Black"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="0" Grid.Column="1" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Background="#F39C12" BorderBrush="#F39C12" Foreground="White" Padding="0,0">
+                                        <materialDesign:PackIcon Kind="Contacts" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                    </Button>
+                                    <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Contacts" HorizontalAlignment="Center" Foreground="Black"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="0" Grid.Column="2" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Click="Debug_Click" Background="#C0392B" BorderBrush="#C0392B" Foreground="White" Padding="0,0">
+                                        <materialDesign:PackIcon Kind="AutoFix" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                    </Button>
+                                    <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Debug" HorizontalAlignment="Center" Foreground="Black"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="0" Grid.Column="3" Margin="5,5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Width="50" Height="50" Click="AboutPage_Click" Background="#85929E" BorderBrush="#85929E" Foreground="White" Padding="0,0">
+                                        <materialDesign:PackIcon Kind="InformationOutline" HorizontalAlignment="Center" Width="32" Height="32"/>
+                                    </Button>
+                                    <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="About" HorizontalAlignment="Center" Foreground="Black"/>
+                                </StackPanel>
+
+
+                            </Grid>
+                        </materialDesign:TransitionerSlide>
+                    </materialDesign:Transitioner>
+                </Grid>
+                <Grid Name="DebugScreen" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border  Grid.Row="0" BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" Background="{DynamicResource PrimaryHueDarkBrush}" >
+                        <Grid Margin="5,5">
+                            <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}" Text="Debugging" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+                        </Grid>
+                    </Border>
+                    <ListBox Grid.Row="1" Margin="10,10,10,5" ItemsSource="{Binding Path=LogMessages}" Padding="0,0"/>
+                </Grid>
+                <Grid Name="RecentScreen" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border  Grid.Row="0" BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" Background="{DynamicResource PrimaryHueDarkBrush}" >
+                        <Grid Margin="5,5">
+                            <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}" Text="Recents Calls" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+                        </Grid>
+                    </Border>
+                    <materialDesign:Transitioner Grid.Row="1" Name="RecentViews" SelectedIndex="0">
+                        <materialDesign:TransitionerSlide OpeningEffect="{materialDesign:TransitionEffect Kind=None}">
+                            <ListBox Name="RecentCalls" Margin="10,10,10,5" ItemsSource="{Binding Path=AgentInformation.ReservedObject.Recent}" Padding="0,0">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid HorizontalAlignment="Stretch">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <materialDesign:PackIcon Grid.Column="0" Kind="{Binding Converter={StaticResource RecentLocator},ConverterParameter=CallIcon}" VerticalAlignment="Center" Foreground="{Binding Converter={StaticResource RecentLocator},ConverterParameter=CallIconColor}"/>
+                                            <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Grid.Column="1" Text="{Binding Path=Header}" Margin="5,2" VerticalAlignment="Center"/>
+                                            <TextBlock Grid.Column="2" Text="00:00" VerticalAlignment="Center"/>
+                                            <Button Name="ShowRecentCallData" Grid.Column="3" Style="{StaticResource MaterialDesignFlatButton}" Tag="{Binding ID}" Width="24" Height="24" VerticalAlignment="Center" Click="ShowRecentCallData_Click" Padding="0,0">
+                                                <materialDesign:PackIcon Kind="InformationOutline" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </Button>
+                                            <Line Stroke="Transparent" Grid.Column="0" Grid.ColumnSpan="5" Stretch="Fill" X2="1" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ListBox>
+                        </materialDesign:TransitionerSlide>
+                        <materialDesign:TransitionerSlide OpeningEffect="{materialDesign:TransitionEffect Kind=FadeIn}">
+                            <Grid Name="CallView" Margin="10,10,10,5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Border  Grid.Row="0" BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                                    <Grid Margin="2,5">
+                                        <materialDesign:PackIcon Grid.Column="0" Kind="{Binding Converter={StaticResource RecentLocator},ConverterParameter=CallIcon}" VerticalAlignment="Center" Foreground="{Binding Converter={StaticResource RecentLocator},ConverterParameter=CallIconColor}"/>
+                                        <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="{Binding Path=Header}" Foreground="{DynamicResource PrimaryHueDarkBrush}" HorizontalAlignment="Center"/>
+                                        <Button Name="CloseRecentDialogDetails" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}" Width="20" Height="20" Click="CloseRecentDialogDetails_Click" Padding="0,0">
+                                            <materialDesign:PackIcon Kind="Close"  Width="18" Height="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Button>
+                                    </Grid>
+                                </Border>
+                                <ScrollViewer Grid.Row="1">
+                                    <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                                        <Grid Margin="2,2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Margin="5,5" Grid.Column="0" Grid.Row="0" Style="{StaticResource MaterialDesignBody2TextBlock}" Text="ID"/>
+                                            <TextBlock Margin="5,5" Grid.Column="1" Grid.Row="0" Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{Binding ID}"/>
+                                            <TextBlock Margin="5,5" Grid.Column="0" Grid.Row="1" Style="{StaticResource MaterialDesignBody2TextBlock}" Text="State"/>
+                                            <TextBlock Margin="5,5" Grid.Column="1" Grid.Row="1" Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{Binding State}"/>
+                                            <TextBlock Margin="5,5" Grid.Column="0" Grid.Row="2" Style="{StaticResource MaterialDesignBody2TextBlock}" Text="Media Type"/>
+                                            <TextBlock Margin="5,5" Grid.Column="1" Grid.Row="2" Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{Binding MediaType}"/>
+                                            <TextBlock Margin="5,5" Grid.Column="0" Grid.Row="3" Style="{StaticResource MaterialDesignBody2TextBlock}" Text="From address"/>
+                                            <TextBlock Margin="5,5" Grid.Column="1" Grid.Row="3" Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{Binding FromAddress}"/>
+                                            <TextBlock Margin="5,5" Grid.Column="0" Grid.Row="4" Style="{StaticResource MaterialDesignBody2TextBlock}" Text="To address"/>
+                                            <TextBlock Margin="5,5" Grid.Column="1" Grid.Row="4" Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{Binding ToAddress}"/>
+                                            <Border  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                                                <Grid Margin="2,5">
+                                                    <TextBlock Style="{DynamicResource MaterialDesignBody2TextBlock}" Text="Call data" Foreground="{DynamicResource PrimaryHueDarkBrush}" HorizontalAlignment="Left"/>
+                                                </Grid>
+                                            </Border>
+                                            <ListBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding MediaProperties.CallVariables}" HorizontalAlignment="Stretch">
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Grid Margin="0,0">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="auto"/>
+                                                                <RowDefinition Height="auto"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Grid Grid.Row="0" Background="{StaticResource PrimaryHueLightBrush}">
+                                                                <TextBlock Margin="0,5" Style="{StaticResource MaterialDesignBody2TextBlock}" Text="{Binding Name}" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueDarkBrush}"/>
+                                                            </Grid>
+                                                            <Grid Grid.Row="1" Background="{StaticResource PrimaryHueDarkBrush}">
+                                                                <TextBlock Margin="0,5" Style="{StaticResource MaterialDesignBody1TextBlock}" Text="{Binding Value}" HorizontalAlignment="Center" Foreground="{StaticResource PrimaryHueLightBrush}"/>
+                                                            </Grid>
+                                                            <Line Grid.Row="0"  Stroke="Transparent" Stretch="Fill" X2="1"/>
+                                                        </Grid>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </Grid>
+                                    </Border>
+                                </ScrollViewer>
+                            </Grid>
+                        </materialDesign:TransitionerSlide>
+                    </materialDesign:Transitioner>
+                </Grid>
+            </Grid>
+            <Grid Name="Toolbar" Grid.Row="1" Background="{StaticResource PrimaryHueDarkBrush}">
+                <StackPanel ClipToBounds="True" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource PrimaryHueDarkBrush}">
+                    <ToggleButton Style="{StaticResource MaterialDesignActionToggleButton}" ToolTip="Active calls" Name="CallsShortCut" Click="ActiveCalls_Click" Width="65" Height="40" IsEnabled="{Binding AgentInformation.Dialogs,Converter={StaticResource DialogExtensionLocator},ConverterParameter=ShowCallsPage,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" materialDesign:ShadowAssist.ShadowDepth="Depth0" Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource PrimaryHueMidBrush}">
+                        <ToggleButton.Content>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Phone" HorizontalAlignment="Center"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Calls" FontSize="9"/>
+                            </StackPanel>
+                        </ToggleButton.Content>
+                        <materialDesign:ToggleButtonAssist.OnContent>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Phone" HorizontalAlignment="Center" Foreground="White"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Calls" FontSize="9" Foreground="white"/>
+                            </StackPanel>
+                        </materialDesign:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource MaterialDesignActionToggleButton}" ToolTip="Keypad" Name="KeypadShortCut" Click="Keypad_Click" Width="65" Height="40" IsEnabled="{Binding AgentInformation.MakeCallVisible,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" materialDesign:ShadowAssist.ShadowDepth="Depth0" Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource PrimaryHueMidBrush}">
+                        <ToggleButton.Content>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Dialpad" HorizontalAlignment="Center"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Keypad" FontSize="9"/>
+                            </StackPanel>
+                        </ToggleButton.Content>
+                        <materialDesign:ToggleButtonAssist.OnContent>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Dialpad" HorizontalAlignment="Center" Foreground="White"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Keypad" FontSize="9" Foreground="white"/>
+                            </StackPanel>
+                        </materialDesign:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource MaterialDesignActionToggleButton}" ToolTip="Home" Name="HomeShortCut" Click="HomePage_Click" Width="65" Height="55" materialDesign:ShadowAssist.ShadowDepth="Depth4" Background="Transparent"  Foreground="{StaticResource PrimaryHueMidBrush}">
+                        <ToggleButton.Content>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Home" HorizontalAlignment="Center"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Home" FontSize="9"/>
+                            </StackPanel>
+                        </ToggleButton.Content>
+                        <materialDesign:ToggleButtonAssist.OnContent>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Home" HorizontalAlignment="Center" Foreground="White"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Home" FontSize="9" Foreground="white"/>
+                            </StackPanel>
+                        </materialDesign:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource MaterialDesignActionToggleButton}" ToolTip="Recents" Name="RecentsShortCut" Click="Recents_Click" Width="65" Height="40" VerticalAlignment="Center" materialDesign:ShadowAssist.ShadowDepth="Depth0" Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource PrimaryHueMidBrush}">
+                        <ToggleButton.Content>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Clock" HorizontalAlignment="Center"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Recents" FontSize="9"/>
+                            </StackPanel>
+                        </ToggleButton.Content>
+                        <materialDesign:ToggleButtonAssist.OnContent>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Clock" HorizontalAlignment="Center" Foreground="White"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Recents" FontSize="9" Foreground="white"/>
+                            </StackPanel>
+                        </materialDesign:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+                    <ToggleButton Style="{StaticResource MaterialDesignActionToggleButton}" ToolTip="Apps" Name="AppsShortCut" Click="AppsPage_Click" Width="65" Height="40" VerticalAlignment="Center" materialDesign:ShadowAssist.ShadowDepth="Depth0" Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource PrimaryHueMidBrush}">
+                        <ToggleButton.Content>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Apps" HorizontalAlignment="Center"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Apps" FontSize="9"/>
+                            </StackPanel>
+                        </ToggleButton.Content>
+                        <materialDesign:ToggleButtonAssist.OnContent>
+                            <StackPanel HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Apps" HorizontalAlignment="Center" Foreground="White"/>
+                                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" Text="Apps" FontSize="9" Foreground="white"/>
+                            </StackPanel>
+                        </materialDesign:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid x:Name="LoginPage" Grid.Row="1" Visibility="Hidden">
+            <StackPanel Name="LoginMainScreen" Margin="0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Visible">
+                <materialDesign:PackIcon Kind="Account" Width="200" Height="200" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+                <Grid VerticalAlignment="Stretch" HorizontalAlignment="Center">
+                    <WrapPanel>
+                        <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="{StaticResource PrimaryHueMidBrush}"/>
+                        <TextBox materialDesign:HintAssist.Hint="Agent ID" x:Name="AgentID" KeyDown="ProcessLoginFromText" Text="{Binding Path=AgentInformation.AgentID,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="5,3" BorderBrush="#3D687C"/>
+                    </WrapPanel>
+                </Grid>
+                <Grid VerticalAlignment="Stretch" HorizontalAlignment="Center">
+                    <WrapPanel>
+                        <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="{StaticResource PrimaryHueMidBrush}"/>
+                        <PasswordBox materialDesign:HintAssist.Hint="Password" KeyDown="ProcessLoginFromText" x:Name="AgentPassword" Width="200" Margin="5,3" BorderBrush="#3D687C"/>
+                    </WrapPanel>
+                </Grid>
+                <Grid VerticalAlignment="Stretch" HorizontalAlignment="Center">
+                    <WrapPanel>
+                        <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Center" Foreground="{StaticResource PrimaryHueMidBrush}"/>
+                        <TextBox materialDesign:HintAssist.Hint="Extension" x:Name="AgentExtension" KeyDown="ProcessLoginFromText" Text="{Binding Path=AgentInformation.Extension,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="5,3" BorderBrush="#3D687C"/>
+                    </WrapPanel>
+                </Grid>
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionAccentButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="LoginClick"  Width="80" Height="80" Margin="0,20" Background="#49d862" BorderBrush="#49d862">
+                        <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="GO!" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+                    </Button>
+                </Grid>
+            </StackPanel>
+            <Grid Name="LoginSettingScreen" Margin="5,5" VerticalAlignment="Top" HorizontalAlignment="Stretch" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" Background="{DynamicResource PrimaryHueDarkBrush}" >
+                    <Grid Margin="5,5">
+                        <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}" Text="Server" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+                    </Grid>
+                </Border>
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="Server" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBox Margin="10,3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="DomainA" materialDesign:HintAssist.Hint="Finesse A" KeyDown="ProcessLoginFromText" Visibility="Visible" Text="{Binding Path=AgentInformation.DomainA,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" BorderThickness="0">
+                                    <TextBox.Resources>
+                                        <Style TargetType="TextBox">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsFocused" Value="true">
+                                                    <Setter Property = "BorderBrush" Value="Transparent"/>
+                                                    <Setter Property = "BorderThickness" Value="0"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="Server" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBox Margin="10,3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="DomainB" materialDesign:HintAssist.Hint="Finesse B" KeyDown="ProcessLoginFromText" Visibility="Visible" Text="{Binding Path=AgentInformation.DomainB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" BorderThickness="0">
+                                    <TextBox.Resources>
+                                        <Style TargetType="TextBox">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsFocused" Value="true">
+                                                    <Setter Property = "BorderBrush" Value="Transparent"/>
+                                                    <Setter Property = "BorderThickness" Value="0"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" Background="{DynamicResource PrimaryHueDarkBrush}" >
+                            <Grid Margin="5,5">
+                                <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}" Text="Connection" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="Security" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="SSL"/>
+                                <ToggleButton Grid.Column="2" x:Name="SSL" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=AgentInformation.SSL}" ToolTip="SSL"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="ServerSecurity" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="5,3" Grid.Column="1" Text="XMPP Port"/>
+                                <TextBox Margin="10,3" Grid.Column="2" x:Name="XMPPPort" materialDesign:HintAssist.Hint="xmpp port default 7071 , 7443" KeyDown="ProcessLoginFromText" Visibility="Visible" Text="{Binding Path=AgentInformation.XMPPPort,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" BorderThickness="0" HorizontalContentAlignment="Right">
+                                    <TextBox.Resources>
+                                        <Style TargetType="TextBox">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsFocused" Value="true">
+                                                    <Setter Property = "BorderBrush" Value="Transparent"/>
+                                                    <Setter Property = "BorderThickness" Value="0"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="ServerSecurity" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="5,3" Grid.Column="1" Text="Http Port"/>
+                                <TextBox Margin="10,3" Grid.Column="2" x:Name="HTTPPort" materialDesign:HintAssist.Hint="http port default 80 , 8445" KeyDown="ProcessLoginFromText" Visibility="Visible" Text="{Binding Path=AgentInformation.HTTPPort,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" BorderThickness="0" HorizontalContentAlignment="Right">
+                                    <TextBox.Resources>
+                                        <Style TargetType="TextBox">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsFocused" Value="true">
+                                                    <Setter Property = "BorderBrush" Value="Transparent"/>
+                                                    <Setter Property = "BorderThickness" Value="0"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="LanConnect" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="5,3" Grid.Column="1" Text="XMPP Connection Type"/>
+                                <ComboBox Margin="10,0" Grid.Column="2" ItemsSource="{Binding AgentInformation.ReservedObject.ConnectionType}" SelectedValue="{Binding AgentInformation.XMPPConnectionType,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="LanConnect" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="5,3" Grid.Column="1" Text="HTTP Connection Type"/>
+                                <ComboBox Margin="10,0" Grid.Column="2" ItemsSource="{Binding AgentInformation.ReservedObject.ConnectionType}" SelectedValue="{Binding AgentInformation.HTTPConnectionType,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="Heart" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="5,3" Grid.Column="1" Text="Heart beat in seconds"/>
+                                <TextBox Margin="10,0" Grid.Column="2" Text="{Binding AgentInformation.XmppKeepAliveInterval}"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="FileDocument" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="5,3" Grid.Column="1" Text="Finesse Version"/>
+                                <TextBox Margin="10,0" Grid.Column="2" Text="{Binding FinesseVersion}"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" Background="{DynamicResource PrimaryHueDarkBrush}" >
+                            <Grid Margin="5,5">
+                                <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}" Text="Debug" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="PhoneLog" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Phone traces"/>
+                                <ToggleButton Grid.Column="2" x:Name="TraceStatus" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=TraceStatus}" ToolTip="Trace"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="ContentSave" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Save Log"/>
+                                <ToggleButton Grid.Column="2" x:Name="Savelog" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=SaveLog}" ToolTip="Save Log"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" Background="{DynamicResource PrimaryHueDarkBrush}" >
+                            <Grid Margin="5,5">
+                                <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}" Text="Rajhi Integration" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="Server" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBox Margin="10,3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="CTIWEB" materialDesign:HintAssist.Hint="CTIWeb Server" KeyDown="ProcessLoginFromText" Visibility="Visible" Text="{Binding Path=AgentInformation.ReservedObject.CtiWeb,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" BorderThickness="0">
+                                    <TextBox.Resources>
+                                        <Style TargetType="TextBox">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsFocused" Value="true">
+                                                    <Setter Property = "BorderBrush" Value="Transparent"/>
+                                                    <Setter Property = "BorderThickness" Value="0"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="ArrowLeftBoldCircleOutline" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Catt AUD on Call Start"/>
+                                <ToggleButton Grid.Column="2" x:Name="LogAUDStart" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=AgentInformation.ReservedObject.CallAUDStart}" ToolTip="Call AUD Start"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="ArrowLeftBoldCircleOutline" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Call AUD on Call End"/>
+                                <ToggleButton Grid.Column="2" x:Name="LogAUDEnd" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=AgentInformation.ReservedObject.CallAUDEnd}" ToolTip="Call AUD End"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="AlertCircle" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Fire Call Start"/>
+                                <ToggleButton Grid.Column="2" x:Name="FireCallStart" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=AgentInformation.ReservedObject.FireCallStartEvent}" ToolTip="Fire Call Start"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="AlertCircleOutline" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Fire Call End"/>
+                                <ToggleButton Grid.Column="2" x:Name="FireCallEnd" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=AgentInformation.ReservedObject.FireCallEndEvent}" ToolTip="Fire Call End"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="Phone" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Log Call Start"/>
+                                <ToggleButton Grid.Column="2" x:Name="LogCallStart" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=AgentInformation.ReservedObject.LogCallStart}" ToolTip="Log Call Start"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="PhoneHangup" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Log Call End"/>
+                                <ToggleButton Grid.Column="2" x:Name="LogCallEnd" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=AgentInformation.ReservedObject.LogCallEnd}" ToolTip="Log Call End"/>
+                            </Grid>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueLightBrush}">
+                            <Grid Margin="2,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Grid.Column="0" Kind="PhoneOutgoing" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryHueDarkBrush}"/>
+                                <TextBlock Margin="10,3" Grid.Column="1" Style="{DynamicResource MaterialDesignCaptionTextBlock}" Text="Log Call Transfer"/>
+                                <ToggleButton Grid.Column="2" x:Name="LogCallTransfer" Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" IsChecked="{Binding Path=AgentInformation.ReservedObject.LogCallTransfer}" ToolTip="Log Call Transfer"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+            <ToggleButton Name="LoginSetting" Margin="5,2" Style="{DynamicResource MaterialDesignActionLightToggleButton}" HorizontalAlignment="Right" Click="LoginSetting_Checked" Visibility="{Binding Path=AgentInformation.ReservedObject.ConfigureDetails,Converter={StaticResource BooleanToVisibilityConverter}}" Background="Transparent" Foreground="#49d862" VerticalAlignment="Top">
+                <materialDesign:PackIcon Kind="Settings" Foreground="{StaticResource PrimaryHueMidBrush}"/>
+            </ToggleButton>
+        </Grid>
+        <Grid x:Name="LoadingPage" Grid.Row="1" Visibility="Hidden">
+            <StackPanel VerticalAlignment="Center">
+                <Image gif:AnimationBehavior.SourceUri="Images/Loader.gif" Width="150" Height="150" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" x:Name="CurrentLoadingStep" Text="{Binding LoadingMessage}" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+        <materialDesign:Snackbar MessageQueue="{materialDesign:MessageQueue}" x:Name="ErrorBar" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+    </Grid>
+
+
+</USD:DynamicsBaseHostedControl>
